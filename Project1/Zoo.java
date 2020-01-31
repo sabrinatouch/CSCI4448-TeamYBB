@@ -43,17 +43,26 @@ public class Feline extends Animal
 /* -------------------------- Level 1.3 -------------------------- */
 public class Cat extends Feline
 {
+  public void makeNoise()
+  {
 
+  }
 }
 
 public class Tiger extends Feline
 {
+  public void makeNoise()
+  {
 
+  }
 }
 
 public class Lion extends Feline
 {
+  public void makeNoise()
+  {
 
+  }
 }
 
 /* -------------------------- Level 2.2 -------------------------- */
@@ -69,12 +78,18 @@ public class Canine extends Animal
 /* -------------------------- Level 2.3 -------------------------- */
 public class Wolf extends Canine
 {
+  public void makeNoise()
+  {
 
+  }
 }
 
 public class Dog extends Canine
 {
+  public void makeNoise()
+  {
 
+  }
 }
 
 /* -------------------------- Level 3.2 -------------------------- */
@@ -90,17 +105,26 @@ public class Pachyderm extends Animal
 /* -------------------------- Level 3.3 -------------------------- */
 public class Hippo extends Pachyderm
 {
+  public void makeNoise()
+  {
 
+  }
 }
 
 public class Elephant extends Pachyderm
 {
+  public void makeNoise()
+  {
 
+  }
 }
 
 public class Rhino extends Pachyderm
 {
+  public void makeNoise()
+  {
 
+  }
 }
 
 /* -------------------------- Zookeeper -------------------------- */
