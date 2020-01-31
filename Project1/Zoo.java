@@ -14,19 +14,19 @@ public class Animal
   // Sleep Method
   public void sleep()
   {
-
+    System.out.println("Goes to sleep")
   }
 
   // Eat Method
   public void eat()
   {
-
+    System.out.println("Eats")
   }
 
   // Wake Up Method
   public void wakeUp()
   {
-
+    System.out.println("Wakes Up")
   }
 }
 
@@ -43,25 +43,37 @@ public class Feline extends Animal
 /* -------------------------- Level 1.3 -------------------------- */
 public class Cat extends Feline
 {
+  public Cat(String name)
+  {
+    this.name = name
+  }
   public void makeNoise()
   {
-
+    System.out.println("Meows")
   }
 }
 
 public class Tiger extends Feline
 {
+  public Tiger(String name)
+  {
+    this.name = name
+  }
   public void makeNoise()
   {
-
+    System.out.println("Rawrs")
   }
 }
 
 public class Lion extends Feline
 {
+  public Lion(String name)
+  {
+    this.name = name
+  }
   public void makeNoise()
   {
-
+    System.out.println("Roars")
   }
 }
 
@@ -78,17 +90,25 @@ public class Canine extends Animal
 /* -------------------------- Level 2.3 -------------------------- */
 public class Wolf extends Canine
 {
+  public Wolf(String name)
+  {
+    this.name = name
+  }
   public void makeNoise()
   {
-
+    System.out.println("Howls")
   }
 }
 
 public class Dog extends Canine
 {
+  public Dog(String name)
+  {
+    this.name = name
+  }
   public void makeNoise()
   {
-
+    System.out.println("Barks")
   }
 }
 
@@ -105,25 +125,37 @@ public class Pachyderm extends Animal
 /* -------------------------- Level 3.3 -------------------------- */
 public class Hippo extends Pachyderm
 {
+  public Hippo(String name)
+  {
+    this.name = name
+  }
   public void makeNoise()
   {
-
+    System.out.println("Wheezes")
   }
 }
 
 public class Elephant extends Pachyderm
 {
+  public Elephant(String name)
+  {
+    this.name = name
+  }
   public void makeNoise()
   {
-
+    System.out.println("Trumpets")
   }
 }
 
 public class Rhino extends Pachyderm
 {
+  public Rhino(String name)
+  {
+    this.name = name
+  }
   public void makeNoise()
   {
-
+    System.out.println("Grunts")
   }
 }
 
