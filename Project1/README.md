@@ -4,5 +4,4 @@
 
 ### Compiling instructions:
 javac Main.java
-
 java Main > dayatthezoo.out	
