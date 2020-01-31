@@ -59,12 +59,13 @@ class Animal
 /* -------------------------- Level 1.2 -------------------------- */
 class Feline extends Animal
 {
+  //  https://www.geeksforgeeks.org/super-keyword/ Seeing how to use super 
   public Feline(String name)
   {
     super(name, "Feline");
   }
 
-  // Roam Method
+  // Roam Method for Felines
   public String roam()
   {
     return("Strolls Around");
@@ -77,6 +78,7 @@ class Cat extends Feline
   {
     super(name);
   }
+  //Each of these methods use the randomAction method to randomize the cat's actions
    public String sleep()
   {
     return randomAction();
@@ -101,9 +103,10 @@ class Cat extends Feline
   {
     return randomAction();
   }
-
+  //Method to randomize what the cat is doing
   public String randomAction()
   {
+    // https://www.educative.io/edpresso/how-to-use-the-mathrandom-method-in-java source for randomizing
     int range = (5 - 1) + 1;
     int action = (int)(Math.random() * range) + 1;
 
