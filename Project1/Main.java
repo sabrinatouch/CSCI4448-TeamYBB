@@ -32,24 +32,24 @@ class Animal
   {
     return("Wakes Up");
   }
-  
+
   // Roam Method
   public String roam()
   {
     return("Roams");
   }
-  
+
   // Make noise Method
   public String makeNoise()
   {
     return("Animal Noises");
   }
-  
+
   public String getName()
   {
       return name;
   }
-  
+
   public String getType()
   {
       return type;
@@ -77,9 +77,53 @@ class Cat extends Feline
   {
     super(name);
   }
+   public String sleep()
+  {
+    return randomAction();
+  }
+
+  public String eat()
+  {
+    return randomAction();
+  }
+
+  public String wakeUp()
+  {
+    return randomAction();
+  }
+
+  public String roam()
+  {
+    return randomAction();
+  }
+
   public String makeNoise()
   {
-    return("Meows");
+    return randomAction();
+  }
+
+  public String randomAction()
+  {
+    int range = (5 - 1) + 1;
+    int action = (int)(Math.random() * range) + 1;
+
+    switch(action)
+    {
+        case 1:
+            return("Goes to sleep");
+
+        case 2:
+            return("Eats");
+
+        case 3:
+            return("Wakes Up");
+
+        case 4:
+            return("Strolls Around");
+
+        default:
+            return("Meows");
+    }
   }
 }
 
@@ -202,24 +246,74 @@ class Rhino extends Pachyderm
 /* -------------------------- Zookeeper -------------------------- */
 class Zookeeper
 {
-  
+
   // Construtor for Zookeeper class
   public Zookeeper()
   {
-    
+
   }
 
   //Wake up animals
   public void wakeAnimals(Animal[] animalList)
   {
+    System.out.println("Zookeeper wakes up animals\n");
     for (int i = 0; i<animalList.length; i++)
     {
         Animal currAnimal = animalList[i];
-        System.out.println(currAnimal.getName());
-        System.out.println(currAnimal.getType());
-        System.out.println(currAnimal.wakeUp());
+        System.out.println(currAnimal.getName() + ", " + currAnimal.getType() + ", " + currAnimal.wakeUp());
     }
+        System.out.println();
   }
+
+  //Roll call animals
+  public void rollCallAnimals(Animal[] animalList)
+  {
+    System.out.println("Zookeeper roll calls animals\n");
+    for (int i = 0; i<animalList.length; i++)
+    {
+        Animal currAnimal = animalList[i];
+        System.out.println(currAnimal.getName() + ", " + currAnimal.getType() + ", " + currAnimal.makeNoise());
+    }
+        System.out.println();
+  }
+
+  //Feed animals
+  public void feedAnimals(Animal[] animalList)
+  {
+    System.out.println("Zookeeper feeds animals\n");
+    for (int i = 0; i<animalList.length; i++)
+    {
+        Animal currAnimal = animalList[i];
+        System.out.println(currAnimal.getName() + ", " + currAnimal.getType() + ", " + currAnimal.eat());
+    }
+        System.out.println();
+  }
+
+  //Exercise animals
+  public void exerciseAnimals(Animal[] animalList)
+  {
+    System.out.println("Zookeeper feeds animals\n");
+    for (int i = 0; i<animalList.length; i++)
+    {
+        Animal currAnimal = animalList[i];
+        System.out.println(currAnimal.getName() + ", " + currAnimal.getType() + ", " + currAnimal.roam());
+    }
+        System.out.println();
+  }
+
+  //Shut down Zoo
+  public void shutDown(Animal[] animalList)
+  {
+    System.out.println("Zookeeper shuts down the zoo\n");
+    for (int i = 0; i<animalList.length; i++)
+    {
+        Animal currAnimal = animalList[i];
+        System.out.println(currAnimal.getName() + ", " + currAnimal.getType() + ", " + currAnimal.sleep());
+    }
+        System.out.println();
+  }
+
+
 }
 
 /* -------------------------- Main -------------------------- */
@@ -227,25 +321,29 @@ public class Main
 {
   public static void main(String[] args)
   {
-    Cat Carla = new Cat("Carla");
-    Cat Chloe = new Cat("Chloe");
-    Tiger Tony = new Tiger("Tony");
-    Tiger Tim = new Tiger("Tim");
-    Lion Leo = new Lion("Leo");
-    Lion Louis = new Lion("Louis");
-    Wolf Wally = new Wolf("Wally");
-    Wolf Warwick = new Wolf("Warwick");
-    Hippo Henry = new Hippo("Henry");
-    Hippo Happy = new Hippo("Happy");
-    Elephant Ellie = new Elephant("Ellie");
-    Elephant Eric = new Elephant("Eric");
-    Rhino Reese = new Rhino("Reese");
-    Rhino Rick = new Rhino("Rick");
+    Cat carla = new Cat("Carla");
+    Cat chloe = new Cat("Chloe");
+    Tiger tony = new Tiger("Tony");
+    Tiger tim = new Tiger("Tim");
+    Lion leo = new Lion("Leo");
+    Lion louis = new Lion("Louis");
+    Wolf wally = new Wolf("Wally");
+    Wolf warwick = new Wolf("Warwick");
+    Hippo henry = new Hippo("Henry");
+    Hippo happy = new Hippo("Happy");
+    Elephant ellie = new Elephant("Ellie");
+    Elephant eric = new Elephant("Eric");
+    Rhino reese = new Rhino("Reese");
+    Rhino rick = new Rhino("Rick");
     Animal[] listofAnimals = new Animal[]
     {
-        Carla, Chloe, Tony, Tim, Leo, Louis, Wally, Warwick, Henry, Happy, Ellie, Eric, Reese, Rick
+        carla, chloe, tony, tim, leo, louis, wally, warwick, henry, happy, ellie, eric, reese, rick
     };
-    Zookeeper Khoa = new Zookeeper();
-    Khoa.wakeAnimals(listofAnimals);
+    Zookeeper khoa = new Zookeeper();
+    khoa.wakeAnimals(listofAnimals);
+    khoa.rollCallAnimals(listofAnimals);
+    khoa.feedAnimals(listofAnimals);
+    khoa.exerciseAnimals(listofAnimals);
+    khoa.shutDown(listofAnimals);
   }
 }
