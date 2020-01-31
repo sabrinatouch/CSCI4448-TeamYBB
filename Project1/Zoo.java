@@ -35,7 +35,7 @@ public class Feline extends Animal
 {
   public Feline()
   {
-    this.type = 'Feline';
+    this.type = "Feline";
   }
 
   // Roam Method
@@ -87,7 +87,7 @@ public class Canine extends Animal
 {
   public Canine()
   {
-    this.type = 'Canine';
+    this.type = "Canine";
   }
 
   // Roam Method
@@ -127,7 +127,7 @@ public class Pachyderm extends Animal
 {
   public Pachyderm()
   {
-    this.type = 'Pachyderm';
+    this.type = "Pachyderm";
   }
 
   // Roam Method
