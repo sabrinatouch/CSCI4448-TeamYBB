@@ -33,6 +33,11 @@ public class Animal
 /* -------------------------- Level 1.2 -------------------------- */
 public class Feline extends Animal
 {
+  public Feline()
+  {
+    this.type = 'Feline'
+  }
+
   // Roam Method
   public void roam()
   {
@@ -80,6 +85,11 @@ public class Lion extends Feline
 /* -------------------------- Level 2.2 -------------------------- */
 public class Canine extends Animal
 {
+  public Canine()
+  {
+    this.type = 'Canine'
+  }
+
   // Roam Method
   public void roam()
   {
@@ -115,6 +125,11 @@ public class Dog extends Canine
 /* -------------------------- Level 3.2 -------------------------- */
 public class Pachyderm extends Animal
 {
+  public Pachyderm()
+  {
+    this.type = 'Pachyderm'
+  }
+
   // Roam Method
   public void roam()
   {
