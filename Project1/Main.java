@@ -1,11 +1,15 @@
-/**
-  Team Members: Justin Vuong, Sabrina Touch, Andy Kim
-*/
+/********************************************************
+**                                                     **
+** Team Members: Justin Vuong, Sabrina Touch, Andy Kim **
+**        CSCI4448-Object Oriented Programming         **
+**                     Project 1                       **
+**                                                     **
+********************************************************/
 
-/* -------------------------- Animal -------------------------- */
+/* -------------------------- Animal (Superclass) -------------------------- */
 class Animal
 {
-  //Creating private variables name and type
+  // Creating private variables name and type
   private String name;
   private String type;
 
@@ -51,7 +55,7 @@ class Animal
   {
       return name;
   }
-  
+
   // Method to get animal's subtype
   public String getType()
   {
@@ -59,11 +63,11 @@ class Animal
   }
 }
 
-/* -------------------------- Level 1.2 -------------------------- */
+/* -------------------------- Feline (Subclass of Animal) -------------------------- */
 class Feline extends Animal
 {
-  //https://www.geeksforgeeks.org/super-keyword/ Seeing how to use super 
-  //Any animal made that extends Feline will have the Feline type automatically
+  // https://www.geeksforgeeks.org/super-keyword/ Seeing how to use super
+  // Any animal made that extends Feline will have the Feline type automatically
   public Feline(String name)
   {
     super(name, "Feline");
@@ -76,14 +80,15 @@ class Feline extends Animal
   }
 }
 
+/* -------------------------- Cat, Tiger, Lion (Subclass of Feline) -------------------------- */
 class Cat extends Feline
 {
-  //Constructs a Cat with given name
+  // Constructs a Cat with given name
   public Cat(String name)
   {
     super(name);
   }
-  //Each of the methods use the randomAction method to randomize the cat's actions
+  // Each of the methods use the randomAction method to randomize the cat's actions
    public String sleep()
   {
     return randomAction();
@@ -108,14 +113,15 @@ class Cat extends Feline
   {
     return randomAction();
   }
-  //Method to randomize what the cat is doing
+
+  // Method to randomize what the cat is doing
   public String randomAction()
   {
     // https://www.educative.io/edpresso/how-to-use-the-mathrandom-method-in-java source for randomizing
     int range = (5 - 1) + 1;
     int action = (int)(Math.random() * range) + 1;
-    
-    //Uses switch cases to determine what action the cat will take
+
+    // Uses switch cases to determine what action the cat will take
     switch(action)
     {
         case 1:
@@ -138,7 +144,7 @@ class Cat extends Feline
 
 class Tiger extends Feline
 {
-  //Constructs a Tiger with given name
+  // Constructs a Tiger with given name
   public Tiger(String name)
   {
     super(name);
@@ -151,7 +157,7 @@ class Tiger extends Feline
 
 class Lion extends Feline
 {
-  //Constructs a Lion with given name
+  // Constructs a Lion with given name
   public Lion(String name)
   {
     super(name);
@@ -162,10 +168,10 @@ class Lion extends Feline
   }
 }
 
-/* -------------------------- Level 2.2 -------------------------- */
+/* -------------------------- Canine (Subclass of Animal) -------------------------- */
 class Canine extends Animal
 {
-  /Any animal made that extends Canine will have the Canine type automatically
+  // Any animal made that extends Canine will have the Canine type automatically
   public Canine(String name)
   {
     super(name, "Canine");
@@ -178,7 +184,7 @@ class Canine extends Animal
   }
 }
 
-/* -------------------------- Level 2.3 -------------------------- */
+/* -------------------------- Wolf, Dog (Subclass of Canine) -------------------------- */
 class Wolf extends Canine
 {
   //Constructs a Wolf with given name
@@ -205,10 +211,10 @@ class Dog extends Canine
   }
 }
 
-/* -------------------------- Level 3.2 -------------------------- */
+/* -------------------------- Pachyderm (Subclass of Animal) -------------------------- */
 class Pachyderm extends Animal
 {
-  ///Any animal made that extends Pachyderm will have the Pachyderm type automatically
+  //Any animal made that extends Pachyderm will have the Pachyderm type automatically
   public Pachyderm(String name)
   {
     super(name, "Pachyderm");
@@ -221,7 +227,7 @@ class Pachyderm extends Animal
   }
 }
 
-/* -------------------------- Level 3.3 -------------------------- */
+/* -------------------------- Hippo, Elephant, Rhino (Subclass of Pachyderm) -------------------------- */
 class Hippo extends Pachyderm
 {
   //Constructs a Hippo with given name
@@ -270,67 +276,75 @@ class Zookeeper
   {
   }
 
-  //All animals will call the wake up method
+  // All animals will call the wake up method
   public void wakeAnimals(Animal[] animalList)
   {
     System.out.println("Zookeeper wakes up animals\n");
+
     for (int i = 0; i<animalList.length; i++)
     {
         Animal currAnimal = animalList[i];
         System.out.println(currAnimal.getName() + ", " + currAnimal.getType() + ", " + currAnimal.wakeUp());
     }
-        System.out.println();
+
+    System.out.println();
   }
 
-  //All animals will call the make noise method
+  // All animals will call the make noise method
   public void rollCallAnimals(Animal[] animalList)
   {
     System.out.println("Zookeeper roll calls animals\n");
+
     for (int i = 0; i<animalList.length; i++)
     {
         Animal currAnimal = animalList[i];
         System.out.println(currAnimal.getName() + ", " + currAnimal.getType() + ", " + currAnimal.makeNoise());
     }
-        System.out.println();
+
+    System.out.println();
   }
 
-  //All animals eat
+  // All animals eat
   public void feedAnimals(Animal[] animalList)
   {
     System.out.println("Zookeeper feeds animals\n");
+
     for (int i = 0; i<animalList.length; i++)
     {
         Animal currAnimal = animalList[i];
         System.out.println(currAnimal.getName() + ", " + currAnimal.getType() + ", " + currAnimal.eat());
     }
-        System.out.println();
+
+    System.out.println();
   }
 
-  //All animals roam
+  // All animals roam
   public void exerciseAnimals(Animal[] animalList)
   {
     System.out.println("Zookeeper feeds animals\n");
+
     for (int i = 0; i<animalList.length; i++)
     {
         Animal currAnimal = animalList[i];
         System.out.println(currAnimal.getName() + ", " + currAnimal.getType() + ", " + currAnimal.roam());
     }
-        System.out.println();
+
+    System.out.println();
   }
 
-  //All animals go to sleep
+  // All animals go to sleep
   public void shutDown(Animal[] animalList)
   {
     System.out.println("Zookeeper shuts down the zoo\n");
+
     for (int i = 0; i<animalList.length; i++)
     {
         Animal currAnimal = animalList[i];
         System.out.println(currAnimal.getName() + ", " + currAnimal.getType() + ", " + currAnimal.sleep());
     }
-        System.out.println();
+
+    System.out.println();
   }
-
-
 }
 
 /* -------------------------- Main -------------------------- */
@@ -338,7 +352,7 @@ public class Main
 {
   public static void main(String[] args)
   {
-    //Creating 2 instances of each type of animal
+    // Creating 2 instances of each type of animal
     Cat carla = new Cat("Carla");
     Cat chloe = new Cat("Chloe");
     Tiger tony = new Tiger("Tony");
@@ -353,17 +367,17 @@ public class Main
     Elephant eric = new Elephant("Eric");
     Rhino reese = new Rhino("Reese");
     Rhino rick = new Rhino("Rick");
-    
-    //Making a list of all the animal objects
+
+    // Making a list of all the animal objects
     Animal[] listofAnimals = new Animal[]
     {
         carla, chloe, tony, tim, leo, louis, wally, warwick, henry, happy, ellie, eric, reese, rick
     };
-    
-    //Created instance of zookeeper
+
+    // Created instance of zookeeper
     Zookeeper khoa = new Zookeeper();
-    
-    //Calls each method coresponding to each of the zookeeper's responsibilities
+
+    // Calls each method coresponding to each of the zookeeper's responsibilities
     khoa.wakeAnimals(listofAnimals);
     khoa.rollCallAnimals(listofAnimals);
     khoa.feedAnimals(listofAnimals);
