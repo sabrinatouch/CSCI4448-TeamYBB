@@ -5,46 +5,69 @@
 /* -------------------------- Animal -------------------------- */
 class Animal
 {
-  public String name;
-  public String type;
-  
-  // Constructor of Animal Class
-  public Animal()
-  {
+  private String name;
+  private String type;
 
+  // Constructor of Animal Class
+  public Animal(String name, String type)
+  {
+    this.name = name;
+    this.type = type;
   }
 
   // Sleep Method
-  public void sleep()
+  public String sleep()
   {
-    System.out.println("Goes to sleep");
+    return("Goes to sleep");
   }
 
   // Eat Method
-  public void eat()
+  public String eat()
   {
-    System.out.println("Eats");
+    return("Eats");
   }
 
   // Wake Up Method
-  public void wakeUp()
+  public String wakeUp()
   {
-    System.out.println("Wakes Up");
+    return("Wakes Up");
+  }
+  
+  // Roam Method
+  public String roam()
+  {
+    return("Roams");
+  }
+  
+  // Make noise Method
+  public String makeNoise()
+  {
+    return("Animal Noises");
+  }
+  
+  public String getName()
+  {
+      return name;
+  }
+  
+  public String getType()
+  {
+      return type;
   }
 }
 
 /* -------------------------- Level 1.2 -------------------------- */
 class Feline extends Animal
 {
-  public Feline()
+  public Feline(String name)
   {
-    this.type = "Feline";
+    super(name, "Feline");
   }
 
   // Roam Method
-  public void roam()
+  public String roam()
   {
-    System.out.println("Strolls Around");
+    return("Strolls Around");
   }
 }
 
@@ -52,11 +75,11 @@ class Cat extends Feline
 {
   public Cat(String name)
   {
-    this.name = name;
+    super(name);
   }
-  public void makeNoise()
+  public String makeNoise()
   {
-    System.out.println("Meows");
+    return("Meows");
   }
 }
 
@@ -64,11 +87,11 @@ class Tiger extends Feline
 {
   public Tiger(String name)
   {
-    this.name = name;
+    super(name);
   }
-  public void makeNoise()
+  public String makeNoise()
   {
-    System.out.println("Rawrs");
+    return("Rawrs");
   }
 }
 
@@ -76,26 +99,26 @@ class Lion extends Feline
 {
   public Lion(String name)
   {
-    this.name = name;
+    super(name);
   }
-  public void makeNoise()
+  public String makeNoise()
   {
-    System.out.println("Roars");
+    return("Roars");
   }
 }
 
 /* -------------------------- Level 2.2 -------------------------- */
 class Canine extends Animal
 {
-  public Canine()
+  public Canine(String name)
   {
-    this.type = "Canine";
+    super(name, "Canine");
   }
 
   // Roam Method
-  public void roam()
+  public String roam()
   {
-    System.out.println("Dashes Around");
+    return("Dashes Around");
   }
 }
 
@@ -104,11 +127,11 @@ class Wolf extends Canine
 {
   public Wolf(String name)
   {
-    this.name = name;
+    super(name);
   }
-  public void makeNoise()
+  public String makeNoise()
   {
-    System.out.println("Howls");
+    return("Howls");
   }
 }
 
@@ -116,26 +139,26 @@ class Dog extends Canine
 {
   public Dog(String name)
   {
-    this.name = name;
+    super(name);
   }
-  public void makeNoise()
+  public String makeNoise()
   {
-    System.out.println("Barks");
+    return("Barks");
   }
 }
 
 /* -------------------------- Level 3.2 -------------------------- */
 class Pachyderm extends Animal
 {
-  public Pachyderm()
+  public Pachyderm(String name)
   {
-    this.type = "Pachyderm";
+    super(name, "Pachyderm");
   }
 
   // Roam Method
-  public void roam()
+  public String roam()
   {
-    System.out.println("Stomps Around");
+    return("Stomps Around");
   }
 }
 
@@ -144,11 +167,11 @@ class Hippo extends Pachyderm
 {
   public Hippo(String name)
   {
-    this.name = name;
+    super(name);
   }
-  public void makeNoise()
+  public String makeNoise()
   {
-    System.out.println("Wheezes");
+    return("Wheezes");
   }
 }
 
@@ -156,11 +179,11 @@ class Elephant extends Pachyderm
 {
   public Elephant(String name)
   {
-    this.name = name;
+    super(name);
   }
-  public void makeNoise()
+  public String makeNoise()
   {
-    System.out.println("Trumpets");
+    return("Trumpets");
   }
 }
 
@@ -168,33 +191,61 @@ class Rhino extends Pachyderm
 {
   public Rhino(String name)
   {
-    this.name = name;
+    super(name);
   }
-  public void makeNoise()
+  public String makeNoise()
   {
-    System.out.println("Grunts");
+    return("Grunts");
   }
 }
 
 /* -------------------------- Zookeeper -------------------------- */
 class Zookeeper
 {
+  
   // Construtor for Zookeeper class
   public Zookeeper()
   {
+    
   }
 
   //Wake up animals
-  public void wakeAnimals()
+  public void wakeAnimals(Animal[] animalList)
   {
-
+    for (int i = 0; i<animalList.length; i++)
+    {
+        Animal currAnimal = animalList[i];
+        System.out.println(currAnimal.getName());
+        System.out.println(currAnimal.getType());
+        System.out.println(currAnimal.wakeUp());
+    }
   }
 }
 
 /* -------------------------- Main -------------------------- */
 public class Main
 {
-  public static void Main(String[] args)
+  public static void main(String[] args)
   {
+    Cat Carla = new Cat("Carla");
+    Cat Chloe = new Cat("Chloe");
+    Tiger Tony = new Tiger("Tony");
+    Tiger Tim = new Tiger("Tim");
+    Lion Leo = new Lion("Leo");
+    Lion Louis = new Lion("Louis");
+    Wolf Wally = new Wolf("Wally");
+    Wolf Warwick = new Wolf("Warwick");
+    Hippo Henry = new Hippo("Henry");
+    Hippo Happy = new Hippo("Happy");
+    Elephant Ellie = new Elephant("Ellie");
+    Elephant Eric = new Elephant("Eric");
+    Rhino Reese = new Rhino("Reese");
+    Rhino Rick = new Rhino("Rick");
+    Animal[] listofAnimals = new Animal[]
+    {
+        Carla, Chloe, Tony, Tim, Leo, Louis, Wally, Warwick, Henry, Happy, Ellie, Eric, Reese, Rick
+    };
+    Zookeeper Khoa = new Zookeeper();
+    Khoa.wakeAnimals(listofAnimals);
   }
 }
