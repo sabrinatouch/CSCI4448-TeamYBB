@@ -3,5 +3,6 @@
  Sabrina Touch, Andy Kim, Justin Vuong
 
 ### Compiling instructions:
-javac Main.java 
+javac Main.java
+
 java Main > dayatthezoo.out	
