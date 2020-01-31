@@ -14,19 +14,19 @@ public class Animal
   // Sleep Method
   public void sleep()
   {
-    System.out.println("Goes to sleep")
+    System.out.println("Goes to sleep");
   }
 
   // Eat Method
   public void eat()
   {
-    System.out.println("Eats")
+    System.out.println("Eats");
   }
 
   // Wake Up Method
   public void wakeUp()
   {
-    System.out.println("Wakes Up")
+    System.out.println("Wakes Up");
   }
 }
 
@@ -35,13 +35,13 @@ public class Feline extends Animal
 {
   public Feline()
   {
-    this.type = 'Feline'
+    this.type = 'Feline';
   }
 
   // Roam Method
   public void roam()
   {
-    System.out.println("Strolls Around")
+    System.out.println("Strolls Around");
   }
 }
 
@@ -50,11 +50,11 @@ public class Cat extends Feline
 {
   public Cat(String name)
   {
-    this.name = name
+    this.name = name;
   }
   public void makeNoise()
   {
-    System.out.println("Meows")
+    System.out.println("Meows");
   }
 }
 
@@ -62,11 +62,11 @@ public class Tiger extends Feline
 {
   public Tiger(String name)
   {
-    this.name = name
+    this.name = name;
   }
   public void makeNoise()
   {
-    System.out.println("Rawrs")
+    System.out.println("Rawrs");
   }
 }
 
@@ -74,11 +74,11 @@ public class Lion extends Feline
 {
   public Lion(String name)
   {
-    this.name = name
+    this.name = name;
   }
   public void makeNoise()
   {
-    System.out.println("Roars")
+    System.out.println("Roars");
   }
 }
 
@@ -87,13 +87,13 @@ public class Canine extends Animal
 {
   public Canine()
   {
-    this.type = 'Canine'
+    this.type = 'Canine';
   }
 
   // Roam Method
   public void roam()
   {
-    System.out.println("Dashes Around")
+    System.out.println("Dashes Around");
   }
 }
 
@@ -102,11 +102,11 @@ public class Wolf extends Canine
 {
   public Wolf(String name)
   {
-    this.name = name
+    this.name = name;
   }
   public void makeNoise()
   {
-    System.out.println("Howls")
+    System.out.println("Howls");
   }
 }
 
@@ -114,11 +114,11 @@ public class Dog extends Canine
 {
   public Dog(String name)
   {
-    this.name = name
+    this.name = name;
   }
   public void makeNoise()
   {
-    System.out.println("Barks")
+    System.out.println("Barks");
   }
 }
 
@@ -127,13 +127,13 @@ public class Pachyderm extends Animal
 {
   public Pachyderm()
   {
-    this.type = 'Pachyderm'
+    this.type = 'Pachyderm';
   }
 
   // Roam Method
   public void roam()
   {
-    System.out.println("Stomps Around")
+    System.out.println("Stomps Around");
   }
 }
 
@@ -142,11 +142,11 @@ public class Hippo extends Pachyderm
 {
   public Hippo(String name)
   {
-    this.name = name
+    this.name = name;
   }
   public void makeNoise()
   {
-    System.out.println("Wheezes")
+    System.out.println("Wheezes");
   }
 }
 
@@ -154,11 +154,11 @@ public class Elephant extends Pachyderm
 {
   public Elephant(String name)
   {
-    this.name = name
+    this.name = name;
   }
   public void makeNoise()
   {
-    System.out.println("Trumpets")
+    System.out.println("Trumpets");
   }
 }
 
@@ -166,11 +166,11 @@ public class Rhino extends Pachyderm
 {
   public Rhino(String name)
   {
-    this.name = name
+    this.name = name;
   }
   public void makeNoise()
   {
-    System.out.println("Grunts")
+    System.out.println("Grunts");
   }
 }
 
@@ -193,4 +193,4 @@ public class Zookeeper
 public static void main(String[] args)
 {
 
-}..
+}
