@@ -5,6 +5,7 @@
 /* -------------------------- Animal -------------------------- */
 class Animal
 {
+  //Creating private variables name and type
   private String name;
   private String type;
 
@@ -45,11 +46,13 @@ class Animal
     return("Animal Noises");
   }
 
+  // Method to get the animal's name
   public String getName()
   {
       return name;
   }
-
+  
+  // Method to get animal's subtype
   public String getType()
   {
       return type;
@@ -59,7 +62,8 @@ class Animal
 /* -------------------------- Level 1.2 -------------------------- */
 class Feline extends Animal
 {
-  //  https://www.geeksforgeeks.org/super-keyword/ Seeing how to use super 
+  //https://www.geeksforgeeks.org/super-keyword/ Seeing how to use super 
+  //Any animal made that extends Feline will have the Feline type automatically
   public Feline(String name)
   {
     super(name, "Feline");
@@ -74,11 +78,12 @@ class Feline extends Animal
 
 class Cat extends Feline
 {
+  //Constructs a Cat with given name
   public Cat(String name)
   {
     super(name);
   }
-  //Each of these methods use the randomAction method to randomize the cat's actions
+  //Each of the methods use the randomAction method to randomize the cat's actions
    public String sleep()
   {
     return randomAction();
@@ -109,7 +114,8 @@ class Cat extends Feline
     // https://www.educative.io/edpresso/how-to-use-the-mathrandom-method-in-java source for randomizing
     int range = (5 - 1) + 1;
     int action = (int)(Math.random() * range) + 1;
-
+    
+    //Uses switch cases to determine what action the cat will take
     switch(action)
     {
         case 1:
@@ -132,6 +138,7 @@ class Cat extends Feline
 
 class Tiger extends Feline
 {
+  //Constructs a Tiger with given name
   public Tiger(String name)
   {
     super(name);
@@ -144,6 +151,7 @@ class Tiger extends Feline
 
 class Lion extends Feline
 {
+  //Constructs a Lion with given name
   public Lion(String name)
   {
     super(name);
@@ -157,6 +165,7 @@ class Lion extends Feline
 /* -------------------------- Level 2.2 -------------------------- */
 class Canine extends Animal
 {
+  /Any animal made that extends Canine will have the Canine type automatically
   public Canine(String name)
   {
     super(name, "Canine");
@@ -172,6 +181,7 @@ class Canine extends Animal
 /* -------------------------- Level 2.3 -------------------------- */
 class Wolf extends Canine
 {
+  //Constructs a Wolf with given name
   public Wolf(String name)
   {
     super(name);
@@ -184,6 +194,7 @@ class Wolf extends Canine
 
 class Dog extends Canine
 {
+  //Constructs a Dog with given name
   public Dog(String name)
   {
     super(name);
@@ -197,6 +208,7 @@ class Dog extends Canine
 /* -------------------------- Level 3.2 -------------------------- */
 class Pachyderm extends Animal
 {
+  ///Any animal made that extends Pachyderm will have the Pachyderm type automatically
   public Pachyderm(String name)
   {
     super(name, "Pachyderm");
@@ -212,6 +224,7 @@ class Pachyderm extends Animal
 /* -------------------------- Level 3.3 -------------------------- */
 class Hippo extends Pachyderm
 {
+  //Constructs a Hippo with given name
   public Hippo(String name)
   {
     super(name);
@@ -224,6 +237,7 @@ class Hippo extends Pachyderm
 
 class Elephant extends Pachyderm
 {
+  //Constructs a Elephant with given name
   public Elephant(String name)
   {
     super(name);
@@ -236,6 +250,7 @@ class Elephant extends Pachyderm
 
 class Rhino extends Pachyderm
 {
+  //Constructs a Rhino with given name
   public Rhino(String name)
   {
     super(name);
@@ -253,10 +268,9 @@ class Zookeeper
   // Construtor for Zookeeper class
   public Zookeeper()
   {
-
   }
 
-  //Wake up animals
+  //All animals will call the wake up method
   public void wakeAnimals(Animal[] animalList)
   {
     System.out.println("Zookeeper wakes up animals\n");
@@ -268,7 +282,7 @@ class Zookeeper
         System.out.println();
   }
 
-  //Roll call animals
+  //All animals will call the make noise method
   public void rollCallAnimals(Animal[] animalList)
   {
     System.out.println("Zookeeper roll calls animals\n");
@@ -280,7 +294,7 @@ class Zookeeper
         System.out.println();
   }
 
-  //Feed animals
+  //All animals eat
   public void feedAnimals(Animal[] animalList)
   {
     System.out.println("Zookeeper feeds animals\n");
@@ -292,7 +306,7 @@ class Zookeeper
         System.out.println();
   }
 
-  //Exercise animals
+  //All animals roam
   public void exerciseAnimals(Animal[] animalList)
   {
     System.out.println("Zookeeper feeds animals\n");
@@ -304,7 +318,7 @@ class Zookeeper
         System.out.println();
   }
 
-  //Shut down Zoo
+  //All animals go to sleep
   public void shutDown(Animal[] animalList)
   {
     System.out.println("Zookeeper shuts down the zoo\n");
@@ -324,6 +338,7 @@ public class Main
 {
   public static void main(String[] args)
   {
+    //Creating 2 instances of each type of animal
     Cat carla = new Cat("Carla");
     Cat chloe = new Cat("Chloe");
     Tiger tony = new Tiger("Tony");
@@ -338,11 +353,17 @@ public class Main
     Elephant eric = new Elephant("Eric");
     Rhino reese = new Rhino("Reese");
     Rhino rick = new Rhino("Rick");
+    
+    //Making a list of all the animal objects
     Animal[] listofAnimals = new Animal[]
     {
         carla, chloe, tony, tim, leo, louis, wally, warwick, henry, happy, ellie, eric, reese, rick
     };
+    
+    //Created instance of zookeeper
     Zookeeper khoa = new Zookeeper();
+    
+    //Calls each method coresponding to each of the zookeeper's responsibilities
     khoa.wakeAnimals(listofAnimals);
     khoa.rollCallAnimals(listofAnimals);
     khoa.feedAnimals(listofAnimals);
