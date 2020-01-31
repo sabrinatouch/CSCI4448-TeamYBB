@@ -1,0 +1,85 @@
+Zookeeper wakes up animals
+
+Carla, Feline, Wakes Up
+Chloe, Feline, Eats
+Tony, Feline, Wakes Up
+Tim, Feline, Wakes Up
+Leo, Feline, Wakes Up
+Louis, Feline, Wakes Up
+Wally, Canine, Wakes Up
+Warwick, Canine, Wakes Up
+Henry, Pachyderm, Wakes Up
+Happy, Pachyderm, Wakes Up
+Ellie, Pachyderm, Wakes Up
+Eric, Pachyderm, Wakes Up
+Reese, Pachyderm, Wakes Up
+Rick, Pachyderm, Wakes Up
+
+Zookeeper roll calls animals
+
+Carla, Feline, Eats
+Chloe, Feline, Meows
+Tony, Feline, Rawrs
+Tim, Feline, Rawrs
+Leo, Feline, Roars
+Louis, Feline, Roars
+Wally, Canine, Howls
+Warwick, Canine, Howls
+Henry, Pachyderm, Wheezes
+Happy, Pachyderm, Wheezes
+Ellie, Pachyderm, Trumpets
+Eric, Pachyderm, Trumpets
+Reese, Pachyderm, Grunts
+Rick, Pachyderm, Grunts
+
+Zookeeper feeds animals
+
+Carla, Feline, Meows
+Chloe, Feline, Goes to sleep
+Tony, Feline, Eats
+Tim, Feline, Eats
+Leo, Feline, Eats
+Louis, Feline, Eats
+Wally, Canine, Eats
+Warwick, Canine, Eats
+Henry, Pachyderm, Eats
+Happy, Pachyderm, Eats
+Ellie, Pachyderm, Eats
+Eric, Pachyderm, Eats
+Reese, Pachyderm, Eats
+Rick, Pachyderm, Eats
+
+Zookeeper feeds animals
+
+Carla, Feline, Eats
+Chloe, Feline, Strolls Around
+Tony, Feline, Strolls Around
+Tim, Feline, Strolls Around
+Leo, Feline, Strolls Around
+Louis, Feline, Strolls Around
+Wally, Canine, Dashes Around
+Warwick, Canine, Dashes Around
+Henry, Pachyderm, Stomps Around
+Happy, Pachyderm, Stomps Around
+Ellie, Pachyderm, Stomps Around
+Eric, Pachyderm, Stomps Around
+Reese, Pachyderm, Stomps Around
+Rick, Pachyderm, Stomps Around
+
+Zookeeper shuts down the zoo
+
+Carla, Feline, Strolls Around
+Chloe, Feline, Wakes Up
+Tony, Feline, Goes to sleep
+Tim, Feline, Goes to sleep
+Leo, Feline, Goes to sleep
+Louis, Feline, Goes to sleep
+Wally, Canine, Goes to sleep
+Warwick, Canine, Goes to sleep
+Henry, Pachyderm, Goes to sleep
+Happy, Pachyderm, Goes to sleep
+Ellie, Pachyderm, Goes to sleep
+Eric, Pachyderm, Goes to sleep
+Reese, Pachyderm, Goes to sleep
+Rick, Pachyderm, Goes to sleep
+
