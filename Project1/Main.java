@@ -3,8 +3,11 @@
 */
 
 /* -------------------------- Animal -------------------------- */
-public class Animal
+class Animal
 {
+  public String name;
+  public String type;
+  
   // Constructor of Animal Class
   public Animal()
   {
@@ -31,7 +34,7 @@ public class Animal
 }
 
 /* -------------------------- Level 1.2 -------------------------- */
-public class Feline extends Animal
+class Feline extends Animal
 {
   public Feline()
   {
@@ -45,8 +48,7 @@ public class Feline extends Animal
   }
 }
 
-/* -------------------------- Level 1.3 -------------------------- */
-public class Cat extends Feline
+class Cat extends Feline
 {
   public Cat(String name)
   {
@@ -58,7 +60,7 @@ public class Cat extends Feline
   }
 }
 
-public class Tiger extends Feline
+class Tiger extends Feline
 {
   public Tiger(String name)
   {
@@ -70,7 +72,7 @@ public class Tiger extends Feline
   }
 }
 
-public class Lion extends Feline
+class Lion extends Feline
 {
   public Lion(String name)
   {
@@ -83,7 +85,7 @@ public class Lion extends Feline
 }
 
 /* -------------------------- Level 2.2 -------------------------- */
-public class Canine extends Animal
+class Canine extends Animal
 {
   public Canine()
   {
@@ -98,7 +100,7 @@ public class Canine extends Animal
 }
 
 /* -------------------------- Level 2.3 -------------------------- */
-public class Wolf extends Canine
+class Wolf extends Canine
 {
   public Wolf(String name)
   {
@@ -110,7 +112,7 @@ public class Wolf extends Canine
   }
 }
 
-public class Dog extends Canine
+class Dog extends Canine
 {
   public Dog(String name)
   {
@@ -123,7 +125,7 @@ public class Dog extends Canine
 }
 
 /* -------------------------- Level 3.2 -------------------------- */
-public class Pachyderm extends Animal
+class Pachyderm extends Animal
 {
   public Pachyderm()
   {
@@ -138,7 +140,7 @@ public class Pachyderm extends Animal
 }
 
 /* -------------------------- Level 3.3 -------------------------- */
-public class Hippo extends Pachyderm
+class Hippo extends Pachyderm
 {
   public Hippo(String name)
   {
@@ -150,7 +152,7 @@ public class Hippo extends Pachyderm
   }
 }
 
-public class Elephant extends Pachyderm
+class Elephant extends Pachyderm
 {
   public Elephant(String name)
   {
@@ -162,7 +164,7 @@ public class Elephant extends Pachyderm
   }
 }
 
-public class Rhino extends Pachyderm
+class Rhino extends Pachyderm
 {
   public Rhino(String name)
   {
@@ -175,7 +177,7 @@ public class Rhino extends Pachyderm
 }
 
 /* -------------------------- Zookeeper -------------------------- */
-public class Zookeeper
+class Zookeeper
 {
   // Construtor for Zookeeper class
   public Zookeeper()
@@ -190,7 +192,9 @@ public class Zookeeper
 }
 
 /* -------------------------- Main -------------------------- */
-public static void main(String[] args)
+public class Main
 {
-
+  public static void Main(String[] args)
+  {
+  }
 }
