@@ -37,23 +37,23 @@ class Animal:
 
 # -------------------------- Second Level of Inheritance --------------------------
 class Feline(Animal):
-    def __init__(self, name):
-        super().__init__(name, "Feline")
+    def __init__(self, name, roam_strategy):
+        super().__init__(name, "Feline", roam_strategy)
 
     #Feline's Specific Roam Method
     def roam(self):
         return "Strolls Around"
 
 class Canine(Animal):
-    def __init__(self, name):
-        super().__init__(name, "Canine")
+    def __init__(self, name, roam_strategy):
+        super().__init__(name, "Canine", roam_strategy)
 
     def roam(self):
         return "Dashes Around"
 
 class Pachyderm(Animal):
-    def __init__(self, name):
-        super().__init__(name, "Pachyderm")
+    def __init__(self, name, roam_strategy):
+        super().__init__(name, "Pachyderm", roam_strategy)
 
     def makeNoise(self):
         return "Trumpets"
