@@ -2,12 +2,18 @@
   Team Members: Justin Vuong, Sabrina Touch, Andy Kim
 '''
 import random
+from strategy import strollingStrategy
+from strategy import dashingStrategy
+
+stroll = strollingStrategy()
+dash = dashingStrategy()
 
 # -------------------------- Animal --------------------------
 class Animal:
-    def __init__(self, name, type):
+    def __init__(self, name, type, roam_strategy):
         self.name = name
         self.type = type
+        self.roam_strategy = roam_strategy
 
     # Sleep method
     def sleep(self):
@@ -23,7 +29,7 @@ class Animal:
 
     # Roam method
     def roam(self):
-        return "Roams"
+        self.__roam_strategy.roam()
 
     # Make noise method
     def makeNoise(self):
