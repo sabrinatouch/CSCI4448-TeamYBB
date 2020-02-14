@@ -146,10 +146,31 @@ class Rhino(Pachyderm):
         print("Grunts")
 
 # -------------------------- Third Level of Inheritance --------------------------
+
+#Observer pattern applied.
+#Zookeeper serves as a publisher for ZooAnnouncer.
+#Zookeeper is capable of having multiple observers,
+#but for simplicity of this assignment we will have
+#one ZooAnnouncer.
 class Zookeeper:
+    #Set of observers.
+    def __init__(self):
+        self.subscribers = set()
+    #Register subscribers.
+    def register(self, announcer):
+        self.subscribers.add(announcer)
+    #Remove subscribers.
+    def unregister(self, announcer):
+        self.subscribers.discard(announcer)
+    #Send message to the ZooAnnouncer.
+    def announce(self, message):
+        for subscriber in self.subscribers:
+            subscriber.update(message)
+
+
     #Waking up all animals
     def wakeAnimals(self, list):
-        print("Zookeeper wakes up animals\n")
+        #print("Zookeeper wakes up animals\n")
         for i in range(len(list)):
             currAnimal = AnimalList[i]
             print(currAnimal.name + ",\n " + currAnimal.type + ", " )
@@ -158,7 +179,7 @@ class Zookeeper:
         print()
     #Roll calling all animals
     def rollCall(self, list):
-        print("Zookeeper roll calls animals\n")
+        #print("Zookeeper roll calls animals\n")
         for i in range(len(list)):
             currAnimal = AnimalList[i]
             print(currAnimal.name + ", \n" + currAnimal.type + ", " )
@@ -167,7 +188,7 @@ class Zookeeper:
         print()
     #Feed the animals
     def feedAnimals(self, list):
-        print("Zookeeper feeds animals\n")
+        #print("Zookeeper feeds animals\n")
         for i in range(len(list)):
             currAnimal = AnimalList[i]
             print(currAnimal.name + ", \n" + currAnimal.type + ", ")
@@ -176,7 +197,7 @@ class Zookeeper:
         print()
     #Exercise all the animals
     def exerciseAnimals(self, list):
-        print("Zookeeper exercise animals\n")
+        #print("Zookeeper exercise animals\n")
         for i in range(len(list)):
             currAnimal = AnimalList[i]
             print(currAnimal.name + ", \n" + currAnimal.type + ", ")
@@ -185,13 +206,32 @@ class Zookeeper:
         print()
     #Shut down the zoo
     def shutDown(self, list):
-        print("Zookeeper shuts down the zoo\n")
+        #print("Zookeeper shuts down the zoo\n")
         for i in range(len(list)):
             currAnimal = AnimalList[i]
             print(currAnimal.name + ", \n" + currAnimal.type + ", " )
             currAnimal.sleep()
             print()
         print()
+
+#Observer pattern applied.
+#Observer class of Zookeeper.
+class ZooAnnouncer:
+    #ZooAnnouncer will announce a message depending on
+    #The ZooKeeper's actions.
+    def update(self, message):
+        if message == "Wake Up":
+            print("Hi, this is the zoo announcer. The zookeeper is about to wake up the animals." + "\n")
+        elif message == "Roll Call":
+            print("Hi, this is the zoo announcer. The zookeeper is about to roll call the animals." + "\n")
+        elif message == "Feed":
+            print("Hi, this is the zoo announcer. The zookeeper is about to feed the animals." + "\n")
+        elif message == "Exercise":
+            print("Hi, this is the zoo announcer. The zookeeper is about to exercise the animals." + "\n")
+        elif message == "Shut Down":
+            print("Hi, this is the zoo announcer. The zookeeper is about to shut down the zoo." + "\n")
+        else:
+            pass
 
 # -------------------------- Instantiation and Calls --------------------------
 carla = Cat("Carla")
@@ -210,14 +250,33 @@ ellie = Elephant("Ellie")
 eric = Elephant("Eric")
 reese = Rhino("Reese")
 rick = Rhino("Rick")
-#Creating a list of animal objects
 
+#Creating a list of animal objects
 AnimalList = []
 AnimalList.extend((carla, chloe, doug, dennis, tony, tim, leo, louis, wally, warwick, henry, happy, ellie, eric, reese, rick))
 
+#Instantiate Zookeeper and its subscriber. (ZooAnnouncer)
 khoa = Zookeeper()
+announcer = ZooAnnouncer()
+
+#Register the observer.
+khoa.register(announcer)
+
+#Application of observer class.
+khoa.announce("Wake Up")
 khoa.wakeAnimals(AnimalList)
+
+khoa.announce("Roll Call")
 khoa.rollCall(AnimalList)
+
+khoa.announce("Feed")
 khoa.feedAnimals(AnimalList)
+
+khoa.announce("Exercise")
 khoa.exerciseAnimals(AnimalList)
+
+khoa.announce("Shut Down")
 khoa.shutDown(AnimalList)
+
+#Remove observer from subscribers list.
+khoa.unregister(announcer)
