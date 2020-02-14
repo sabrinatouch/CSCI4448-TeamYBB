@@ -2,61 +2,59 @@
   Team Members: Justin Vuong, Sabrina Touch, Andy Kim
 '''
 import random
-from strategy import strollingStrategy
-from strategy import dashingStrategy
+#import strategy pattern methods from Strategy.py
+from Strategy import strollingStrategy
+from Strategy import dashingStrategy
+from Strategy import lumberingStrategy
 
 stroll = strollingStrategy()
 dash = dashingStrategy()
-
+lumber = lumberingStrategy()
 # -------------------------- Animal --------------------------
 class Animal:
     def __init__(self, name, type, roam_strategy):
         self.name = name
         self.type = type
-        self.roam_strategy = roam_strategy
+        self._roam_strategy = roam_strategy
 
     # Sleep method
     def sleep(self):
-        return "Goes to sleep"
+        print("Goes to sleep")
 
     # Eat method
     def eat(self):
-        return "Eats"
+        print("Eats")
 
     # Wake up method
     def wakeUp(self):
-        return "Wakes Up"
+        print("Wakes Up")
 
     # Roam method
+    # HERE IS WHERE STRATEGY IS IMPLEMENTED
     def roam(self):
-        self.__roam_strategy.roam()
+        self._roam_strategy.roam()
 
     # Make noise method
     def makeNoise(self):
-        return "Animal Noises"
+        print("Animal Noises")
 
 # -------------------------- Second Level of Inheritance --------------------------
+#USES THE STRATEGY PATTERN FOR ALL THE ANIMALS ROAM METHODS
 class Feline(Animal):
-    def __init__(self, name, roam_strategy):
-        super().__init__(name, "Feline", roam_strategy)
-
-    #Feline's Specific Roam Method
-    def roam(self):
-        return "Strolls Around"
+    def __init__(self, name):
+        super().__init__(name, "Feline", stroll)
 
 class Canine(Animal):
-    def __init__(self, name, roam_strategy):
-        super().__init__(name, "Canine", roam_strategy)
+    def __init__(self, name):
+            super().__init__(name, "Canine", dash)
 
-    def roam(self):
-        return "Dashes Around"
 
 class Pachyderm(Animal):
-    def __init__(self, name, roam_strategy):
-        super().__init__(name, "Pachyderm", roam_strategy)
+    def __init__(self, name):
+        super().__init__(name, "Pachyderm", lumber)
 
     def makeNoise(self):
-        return "Trumpets"
+        print("Trumpets")
 
 # -------------------------- Third Level of Inheritance --------------------------
 class Cat(Feline):
@@ -66,23 +64,23 @@ class Cat(Feline):
       #Each of these methods use the randomAction method to randomize the cat's actions
     def sleep(self):
         action = random.randint(0, 5)
-        return self.randomAction(action)
+        print(self.randomAction(action))
 
     def eat(self):
         action = random.randint(0, 5)
-        return self.randomAction(action)
+        print(self.randomAction(action))
 
     def wakeUp(self):
         action = random.randint(0, 5)
-        return self.randomAction(action)
+        print(self.randomAction(action))
 
     def roam(self):
         action = random.randint(0, 5)
-        return self.randomAction(action)
+        print(self.randomAction(action))
 
     def makeNoise(self):
         action = random.randint(0, 5)
-        return self.randomAction(action)
+        print(self.randomAction(action))
 
     #Method to randomize what the cat is doing
     def randomAction(self, argument):
@@ -103,49 +101,49 @@ class Tiger(Feline):
         super().__init__(name)
 
     def makeNoise(self):
-        return "Rawrs"
+        print("Rawrs")
 
 class Lion(Feline):
     def __init__(self, name):
         super().__init__(name)
 
     def makeNoise(self):
-        return "Roars"
+        print("Roars")
 
 class Wolf(Canine):
     def __init__(self, name):
         super().__init__(name)
 
     def makeNoise(self):
-        return "Howls"
+        print("Howls")
 
 class Dog(Canine):
     def __init__(self, name):
         super().__init__(name)
 
     def makeNoise(self):
-        return "Barks"
+        print("Barks")
 
 class Hippo(Pachyderm):
     def __init__(self, name):
         super().__init__(name)
 
     def makeNoise(self):
-        return "Wheezes"
+        print("Wheezes")
 
 class Elephant(Pachyderm):
     def __init__(self, name):
         super().__init__(name)
 
     def makeNoise(self):
-        return "Trumpets"
+        print("Trumpets")
 
 class Rhino(Pachyderm):
     def __init__(self, name):
         super().__init__(name)
 
     def makeNoise(self):
-        return "Grunts"
+        print("Grunts")
 
 # -------------------------- Third Level of Inheritance --------------------------
 class Zookeeper:
@@ -154,35 +152,45 @@ class Zookeeper:
         print("Zookeeper wakes up animals\n")
         for i in range(len(list)):
             currAnimal = AnimalList[i]
-            print(currAnimal.name + ", " + currAnimal.type + ", " + currAnimal.wakeUp())
+            print(currAnimal.name + ",\n " + currAnimal.type + ", " )
+            currAnimal.wakeUp()
+            print()
         print()
     #Roll calling all animals
     def rollCall(self, list):
         print("Zookeeper roll calls animals\n")
         for i in range(len(list)):
             currAnimal = AnimalList[i]
-            print(currAnimal.name + ", " + currAnimal.type + ", " + currAnimal.makeNoise())
+            print(currAnimal.name + ", \n" + currAnimal.type + ", " )
+            currAnimal.makeNoise()
+            print()
         print()
     #Feed the animals
     def feedAnimals(self, list):
         print("Zookeeper feeds animals\n")
         for i in range(len(list)):
             currAnimal = AnimalList[i]
-            print(currAnimal.name + ", " + currAnimal.type + ", " + currAnimal.eat())
+            print(currAnimal.name + ", \n" + currAnimal.type + ", ")
+            currAnimal.eat()
+            print()
         print()
     #Exercise all the animals
     def exerciseAnimals(self, list):
         print("Zookeeper exercise animals\n")
         for i in range(len(list)):
             currAnimal = AnimalList[i]
-            print(currAnimal.name + ", " + currAnimal.type + ", " + currAnimal.roam())
+            print(currAnimal.name + ", \n" + currAnimal.type + ", ")
+            currAnimal.roam()
+            print()
         print()
     #Shut down the zoo
     def shutDown(self, list):
         print("Zookeeper shuts down the zoo\n")
         for i in range(len(list)):
             currAnimal = AnimalList[i]
-            print(currAnimal.name + ", " + currAnimal.type + ", " + currAnimal.sleep())
+            print(currAnimal.name + ", \n" + currAnimal.type + ", " )
+            currAnimal.sleep()
+            print()
         print()
 
 # -------------------------- Instantiation and Calls --------------------------
@@ -194,15 +202,18 @@ leo = Lion("Leo")
 louis = Lion("Louis")
 wally = Wolf("Wally")
 warwick = Wolf("Warwick")
+doug = Dog("Doug")
+dennis = Dog("Dennis")
 henry = Hippo("Henry")
 happy = Hippo("Happy")
 ellie = Elephant("Ellie")
 eric = Elephant("Eric")
 reese = Rhino("Reese")
 rick = Rhino("Rick")
-#Creating an
+#Creating a list of animal objects
+
 AnimalList = []
-AnimalList.extend((carla, chloe, tony, tim, leo, louis, wally, warwick, henry, happy, ellie, eric, reese, rick))
+AnimalList.extend((carla, chloe, doug, dennis, tony, tim, leo, louis, wally, warwick, henry, happy, ellie, eric, reese, rick))
 
 khoa = Zookeeper()
 khoa.wakeAnimals(AnimalList)
