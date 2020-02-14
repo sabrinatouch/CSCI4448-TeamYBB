@@ -1,0 +1,333 @@
+Hi, this is the zoo announcer. The zookeeper is about to wake up the animals.
+
+Carla,
+ Feline,
+Wakes Up
+
+Chloe,
+ Feline,
+Eats
+
+Doug,
+ Canine,
+Wakes Up
+
+Dennis,
+ Canine,
+Wakes Up
+
+Tony,
+ Feline,
+Wakes Up
+
+Tim,
+ Feline,
+Wakes Up
+
+Leo,
+ Feline,
+Wakes Up
+
+Louis,
+ Feline,
+Wakes Up
+
+Wally,
+ Canine,
+Wakes Up
+
+Warwick,
+ Canine,
+Wakes Up
+
+Henry,
+ Pachyderm,
+Wakes Up
+
+Happy,
+ Pachyderm,
+Wakes Up
+
+Ellie,
+ Pachyderm,
+Wakes Up
+
+Eric,
+ Pachyderm,
+Wakes Up
+
+Reese,
+ Pachyderm,
+Wakes Up
+
+Rick,
+ Pachyderm,
+Wakes Up
+
+
+Hi, this is the zoo announcer. The zookeeper is about to roll call the animals.
+
+Carla,
+Feline,
+Wakes Up
+
+Chloe,
+Feline,
+Meows
+
+Doug,
+Canine,
+Barks
+
+Dennis,
+Canine,
+Barks
+
+Tony,
+Feline,
+Rawrs
+
+Tim,
+Feline,
+Rawrs
+
+Leo,
+Feline,
+Roars
+
+Louis,
+Feline,
+Roars
+
+Wally,
+Canine,
+Howls
+
+Warwick,
+Canine,
+Howls
+
+Henry,
+Pachyderm,
+Wheezes
+
+Happy,
+Pachyderm,
+Wheezes
+
+Ellie,
+Pachyderm,
+Trumpets
+
+Eric,
+Pachyderm,
+Trumpets
+
+Reese,
+Pachyderm,
+Grunts
+
+Rick,
+Pachyderm,
+Grunts
+
+
+Hi, this is the zoo announcer. The zookeeper is about to feed the animals.
+
+Carla,
+Feline,
+Meows
+
+Chloe,
+Feline,
+Strolls Around
+
+Doug,
+Canine,
+Eats
+
+Dennis,
+Canine,
+Eats
+
+Tony,
+Feline,
+Eats
+
+Tim,
+Feline,
+Eats
+
+Leo,
+Feline,
+Eats
+
+Louis,
+Feline,
+Eats
+
+Wally,
+Canine,
+Eats
+
+Warwick,
+Canine,
+Eats
+
+Henry,
+Pachyderm,
+Eats
+
+Happy,
+Pachyderm,
+Eats
+
+Ellie,
+Pachyderm,
+Eats
+
+Eric,
+Pachyderm,
+Eats
+
+Reese,
+Pachyderm,
+Eats
+
+Rick,
+Pachyderm,
+Eats
+
+
+Hi, this is the zoo announcer. The zookeeper is about to exercise the animals.
+
+Carla,
+Feline,
+Eats
+
+Chloe,
+Feline,
+Goes to sleep
+
+Doug,
+Canine,
+Dashes Around
+
+Dennis,
+Canine,
+Dashes Around
+
+Tony,
+Feline,
+Strolls Around
+
+Tim,
+Feline,
+Strolls Around
+
+Leo,
+Feline,
+Strolls Around
+
+Louis,
+Feline,
+Strolls Around
+
+Wally,
+Canine,
+Dashes Around
+
+Warwick,
+Canine,
+Dashes Around
+
+Henry,
+Pachyderm,
+Lumbers Around
+
+Happy,
+Pachyderm,
+Lumbers Around
+
+Ellie,
+Pachyderm,
+Lumbers Around
+
+Eric,
+Pachyderm,
+Lumbers Around
+
+Reese,
+Pachyderm,
+Lumbers Around
+
+Rick,
+Pachyderm,
+Lumbers Around
+
+
+Hi, this is the zoo announcer. The zookeeper is about to shut down the zoo.
+
+Carla,
+Feline,
+Eats
+
+Chloe,
+Feline,
+Wakes Up
+
+Doug,
+Canine,
+Goes to sleep
+
+Dennis,
+Canine,
+Goes to sleep
+
+Tony,
+Feline,
+Goes to sleep
+
+Tim,
+Feline,
+Goes to sleep
+
+Leo,
+Feline,
+Goes to sleep
+
+Louis,
+Feline,
+Goes to sleep
+
+Wally,
+Canine,
+Goes to sleep
+
+Warwick,
+Canine,
+Goes to sleep
+
+Henry,
+Pachyderm,
+Goes to sleep
+
+Happy,
+Pachyderm,
+Goes to sleep
+
+Ellie,
+Pachyderm,
+Goes to sleep
+
+Eric,
+Pachyderm,
+Goes to sleep
+
+Reese,
+Pachyderm,
+Goes to sleep
+
+Rick,
+Pachyderm,
+Goes to sleep
