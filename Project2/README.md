@@ -8,3 +8,5 @@ Environment: Atom
 
 ### Compiling instructions:
 python Main.py
+
+Need to have both files in order to run and have the strategy pattern implementation.
