@@ -9,4 +9,4 @@ Environment: Atom
 ### Compiling instructions:
 python Main.py
 
-Need to have both files in order to run and have the strategy pattern implementation.
+Need to have both the Main and Strategy files in order to run and have the strategy pattern implementation.
