@@ -5,14 +5,18 @@ class roamStrategy(object):
     #Defining an abstract class
     __metaclass__ = abc.ABCMeta
 
-     @abc.abstractmethod
-     def roam(self):
+     #@abc.abstractmethod
+    def roam(self):
          """Required Method"""
 
 class strollingStrategy(roamStrategy):
     def roam(self):
-        return "Strolls Around"
+        print("Strolls Around")
 
 class dashingStrategy(roamStrategy):
     def roam(self):
-        return "Dashes Around"
+        print("Dashes Around")
+
+class lumberingStrategy(roamStrategy):
+    def roam(self):
+        print("Lumbers Around")
