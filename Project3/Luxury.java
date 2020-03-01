@@ -1,3 +1,19 @@
 public class Luxury implements Car {
-  this.type = "Luxury";
+  public String name;
+  public String type;
+
+  public Luxury(String name, String type){
+    this.name = name;
+    this.type = type;
+  }
+
+  @Override
+  public String getDescription(){
+    return "";
+  }
+
+  @Override
+  public int getCost(){
+    return 0;
+  }
 }
