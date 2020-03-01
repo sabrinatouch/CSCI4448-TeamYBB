@@ -1,6 +1,7 @@
 public class Standard implements Car {
   public String name;
   public String type;
+  public int cost = 30;
 
   public Standard(String name, String type){
     this.name = name;
@@ -14,6 +15,11 @@ public class Standard implements Car {
 
   @Override
   public int getCost(){
-    return 270;
+    return cost;
+  }
+
+  @Override
+  public void setCost(int numDays){
+    this.cost = numDays * cost;
   }
 }
