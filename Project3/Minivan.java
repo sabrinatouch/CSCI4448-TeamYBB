@@ -1,3 +1,11 @@
 public class Minivan implements Car {
-  this.type = "Minivan";
+  @Override
+  public String getDescription(){
+    return "Minivan";
+  }
+
+  @Override
+  public int getCost(){
+    return 270;
+  }
 }

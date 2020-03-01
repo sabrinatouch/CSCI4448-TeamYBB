@@ -1,3 +1,11 @@
 public class SUV implements Car {
-  this.type = "SUV";
+  @Override
+  public String getDescription(){
+    return "SUV";
+  }
+
+  @Override
+  public int getCost(){
+    return 270;
+  }
 }

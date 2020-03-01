@@ -1,3 +1,11 @@
 public class Economy implements Car {
-  this.type = "Economy";
+  @Override
+  public String getDescription(){
+    return "Economy";
+  }
+
+  @Override
+  public int getCost(){
+    return 270;
+  }
 }
