@@ -1,9 +1,5 @@
 public interface Car {
-  /*Car(String type){
-    this.type = type;
-  }*/
-
+  //Subclasses can implement different costs and have different descriptions.
   public String getDescription();
-
   public int getCost();
 }
