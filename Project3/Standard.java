@@ -1,3 +1,11 @@
 public class Standard implements Car {
-  this.type = "Standard";
+  @Override
+  public String getDescription(){
+    return "Standard";
+  }
+
+  @Override
+  public int getCost(){
+    return 270;
+  }
 }
