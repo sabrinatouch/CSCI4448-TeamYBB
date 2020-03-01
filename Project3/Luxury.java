@@ -9,7 +9,7 @@ public class Luxury implements Car {
 
   @Override
   public String getDescription(){
-    return "Luxury";
+    return name + " " + type;
   }
 
   @Override

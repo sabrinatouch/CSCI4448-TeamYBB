@@ -9,7 +9,7 @@ public class Economy implements Car {
 
   @Override
   public String getDescription(){
-    return "Economy";
+    return name + " " + type;
   }
 
   @Override

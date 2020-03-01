@@ -9,7 +9,7 @@ public class Minivan implements Car {
 
   @Override
   public String getDescription(){
-    return "Minivan";
+    return name + " " + type;
   }
 
   @Override
