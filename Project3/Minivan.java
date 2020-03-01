@@ -9,11 +9,11 @@ public class Minivan implements Car {
 
   @Override
   public String getDescription(){
-    return "";
+    return "Minivan";
   }
 
   @Override
   public int getCost(){
-    return 0;
+    return 270;
   }
 }

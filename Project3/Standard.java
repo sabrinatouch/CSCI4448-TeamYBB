@@ -6,14 +6,14 @@ public class Standard implements Car {
     this.name = name;
     this.type = type;
   }
-
+  
   @Override
   public String getDescription(){
-    return "";
+    return "Standard";
   }
 
   @Override
   public int getCost(){
-    return 0;
+    return 270;
   }
 }

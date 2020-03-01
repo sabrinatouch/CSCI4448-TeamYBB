@@ -6,14 +6,14 @@ public class SUV implements Car {
     this.name = name;
     this.type = type;
   }
-
+  
   @Override
   public String getDescription(){
-    return "";
+    return "SUV";
   }
 
   @Override
   public int getCost(){
-    return 0;
+    return 270;
   }
 }
