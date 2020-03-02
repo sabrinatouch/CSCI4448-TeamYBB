@@ -1,7 +1,7 @@
 public class SUV implements Car {
-  public String name;
-  public String type;
-  public int cost = 50;
+  private String name;
+  private String type;
+  private int cost = 50;
 
   public SUV(String name, String type){
     this.name = name;

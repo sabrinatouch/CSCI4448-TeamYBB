@@ -1,7 +1,7 @@
 public class Minivan implements Car {
-  public String name;
-  public String type;
-  public int cost = 60;
+  private String name;
+  private String type;
+  private int cost = 60;
 
   public Minivan(String name, String type){
     this.name = name;

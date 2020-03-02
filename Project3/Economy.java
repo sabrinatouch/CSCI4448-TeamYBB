@@ -1,7 +1,8 @@
 public class Economy implements Car {
-  public String name;
-  public String type;
-  public int cost = 20;
+  //Change to private.
+  private String name;
+  private String type;
+  private int cost = 20;
 
   public Economy(String name, String type){
     this.name = name;

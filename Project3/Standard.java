@@ -1,7 +1,7 @@
 public class Standard implements Car {
-  public String name;
-  public String type;
-  public int cost = 30;
+  private String name;
+  private String type;
+  private int cost = 30;
 
   public Standard(String name, String type){
     this.name = name;

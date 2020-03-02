@@ -1,7 +1,7 @@
 public class Luxury implements Car {
-  public String name;
-  public String type;
-  public int cost = 40;
+  private String name;
+  private String type;
+  private int cost = 40;
 
   public Luxury(String name, String type){
     this.name = name;
