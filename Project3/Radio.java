@@ -9,7 +9,12 @@ public class Radio extends CarDecorator{
     return decoratedCar.getDescription() + ", Radio";
   }
 
+  @Override
   public int getCost(){
     return decoratedCar.getCost() + 50;
+  }
+
+  public void setCost(int numDays){
+    return;
   }
 }

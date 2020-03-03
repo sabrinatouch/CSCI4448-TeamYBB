@@ -121,19 +121,48 @@ public class Main
 
     Random rand = new Random();
     int number_customers = rand.nextInt(12) + 1;
-
+    ArrayList<Customer> rentingCustomers = new ArrayList<Customer>();
     Collections.shuffle(listofCustomers);
+    int revenue = 0
     for (int i = 0; i < number_customers; i++){
+      boolean Radio = rand.nextBoolean();
+      boolean Gps = rand.nextBoolean();
+      boolean CSeat = rand.nextBoolean();
       if(store.getCapacity() > 0){
         Customer tempCustomer = listofCustomers.get(i);
         if(tempCustomer.getCapacity() + tempCustomer.getNumCars() <= 3 && store.getCapacity() - tempCustomer.getNumCars() >= 0){
           for(int j = 0; i < tempCustomer.getNumCars(); j++){
             Car rentalCar = store.removeCar();
+            rentalCar.setCost(tempCustomer.getDays());
+            if(Radio){
+              new Radio(rentalCar);
+            }
+            if(Gps){
+              new GPS(rentalCar);
+            }
+            if(CSeat){
+              new CarSeat(rentalCar);
+            }
             tempCustomer.addList(rentalCar);
+            rentingCustomers.add(tempCustomer);
+            store.addRevenue(rentalCar.getCost());
+            revenue += rentalCar.getCost();
           }
           Rental newRental = new Rental();
           System.out.println(newRental.createRental(tempCustomer.getCarList(), tempCustomer.getDays()));
 
+        }
+      }
+    }
+
+    for(int i = 0; i < rentingCustomers.size(); i++){
+      Customer Current = rentingCustomers.get(i)
+      Current.decrement();
+      if(Current.getDays() == 0){
+        ArrayList<Car> currentCars = new ArrayList<Car>();
+        currentCars = Current.getCarList();
+        for(int j = 0; j < currentCars.size(); j++){
+          
         }
       }
     }

@@ -15,4 +15,6 @@ public abstract class CarDecorator implements Car {
 
     return decoratedCar.getCost();
   }
+
+  public abstract void setCost(int numDays);
 }
