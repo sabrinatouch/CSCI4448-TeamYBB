@@ -123,7 +123,7 @@ public class Main
     int number_customers = rand.nextInt(12) + 1;
     ArrayList<Customer> rentingCustomers = new ArrayList<Customer>();
     Collections.shuffle(listofCustomers);
-    int revenue = 0
+    int revenue = 0;
     for (int i = 0; i < number_customers; i++){
       boolean Radio = rand.nextBoolean();
       boolean Gps = rand.nextBoolean();
@@ -156,13 +156,17 @@ public class Main
     }
 
     for(int i = 0; i < rentingCustomers.size(); i++){
-      Customer Current = rentingCustomers.get(i)
+      Customer Current = rentingCustomers.get(i);
       Current.decrement();
       if(Current.getDays() == 0){
         ArrayList<Car> currentCars = new ArrayList<Car>();
         currentCars = Current.getCarList();
         for(int j = 0; j < currentCars.size(); j++){
-          
+          Car returningCar = currentCars.get(i);
+          String name = returningCar.getName();
+          String type = returningCar.getType();
+          Car newCar = carFactory.createCar(name, type);
+          store.add(newCar);
         }
       }
     }
