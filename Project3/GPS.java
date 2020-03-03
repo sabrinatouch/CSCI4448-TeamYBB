@@ -2,8 +2,6 @@ public class GPS extends CarDecorator{
 
   public GPS(Car newCar) {
     super(newCar);
-
-    System.out.println("Adding GPS");
   }
 
   public String getDescription(){
@@ -17,5 +15,13 @@ public class GPS extends CarDecorator{
 
   public void setCost(int numDays){
     return;
+  }
+
+  public String getName(){
+    return "";
+  }
+
+  public String getType(){
+    return "";
   }
 }

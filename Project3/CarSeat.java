@@ -6,7 +6,7 @@ public class CarSeat extends CarDecorator{
     super(newCar);
     Random rand = new Random();
     number = rand.nextInt(4) + 1;
-    System.out.println("Adding " + number + " Car Seat(s)");
+    
   }
 
   public String getDescription(){
@@ -19,5 +19,13 @@ public class CarSeat extends CarDecorator{
 
   public void setCost(int numDays){
     return;
+  }
+
+  public String getName(){
+    return "";
+  }
+
+  public String getType(){
+    return "";
   }
 }

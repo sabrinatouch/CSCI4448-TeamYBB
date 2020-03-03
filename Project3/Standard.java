@@ -27,4 +27,9 @@ public class Standard implements Car {
   public void setCost(int numDays){
     this.cost = numDays * cost;
   }
+
+  @Override
+  public String getDescription(){
+    return name + type;
+  }
 }

@@ -2,7 +2,6 @@ public class Radio extends CarDecorator{
 
   public Radio(Car newCar) {
     super(newCar);
-    System.out.println("Adding Radio");
   }
 
   public String getDescription(){
@@ -16,5 +15,13 @@ public class Radio extends CarDecorator{
 
   public void setCost(int numDays){
     return;
+  }
+
+  public String getName(){
+    return "";
+  }
+
+  public String getType(){
+    return "";
   }
 }

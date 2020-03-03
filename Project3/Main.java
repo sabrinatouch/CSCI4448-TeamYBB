@@ -114,24 +114,35 @@ public class Main
     listofCustomers.add(customer11);
     listofCustomers.add(customer12);
 
+    int num_day = 1;
+
+    System.out.println("Day number: " + num_day);
+
     for(int i = 0; i < listofCustomers.size(); i++){
       Customer currCust = listofCustomers.get(i);
       currCust.generateDays();
     }
 
     Random rand = new Random();
+    Random rand1 = new Random();
+    Random rand2 = new Random();
+
     int number_customers = rand.nextInt(12) + 1;
     ArrayList<Customer> rentingCustomers = new ArrayList<Customer>();
     int revenue = 0;
     Collections.shuffle(listofCustomers);
     for (int i = 0; i < number_customers; i++){
       boolean Radio = rand.nextBoolean();
-      boolean Gps = rand.nextBoolean();
-      boolean CSeat = rand.nextBoolean();
+      boolean Gps = rand1.nextBoolean();
+      boolean CSeat = rand2.nextBoolean();
+
+      System.out.println(Radio);
+      System.out.println(Gps);
+      System.out.println(CSeat);
       if(store.getCapacity() > 0){
         Customer tempCustomer = listofCustomers.get(i);
         if(tempCustomer.getCapacity() + tempCustomer.getNumCars() <= 3 && store.getCapacity() - tempCustomer.getNumCars() >= 0){
-          for(int j = 0; i < tempCustomer.getNumCars(); j++){
+          for(int j = 0; j < tempCustomer.getNumCars(); j++){
             Car rentalCar = store.removeCar();
             rentalCar.setCost(tempCustomer.getDays());
             if(Radio){
@@ -149,7 +160,7 @@ public class Main
             revenue += rentalCar.getCost();
           }
           Rental newRental = new Rental();
-          System.out.println(newRental.createRental(tempCustomer.getCarList()));
+          //System.out.println(newRental.createRental(tempCustomer.getCarList()));
 
         }
       }
@@ -162,7 +173,7 @@ public class Main
         ArrayList<Car> currentCars = new ArrayList<Car>();
         currentCars = Current.getCarList();
         for(int j = 0; j < currentCars.size(); j++){
-          Car returningCar = currentCars.get(i);
+          Car returningCar = currentCars.get(j);
           String name = returningCar.getName();
           String type = returningCar.getType();
           Car newCar = carFactory.createCar(name, type);
