@@ -6,7 +6,7 @@ Andy Kim, Justin Vuong, Sabrina Touch
 ## Instructions
 ```
 javac Main.java
-java main
+java Main
 ```
 
 ## Language and Environment
