@@ -62,7 +62,7 @@ public class Business extends Customer {
   }
 
   @Override
-  public ArrayList<Object> getCarList(){
+  public ArrayList<Car> getCarList(){
     return carList;
   }
 

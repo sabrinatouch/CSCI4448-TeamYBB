@@ -65,7 +65,7 @@ public class Casual extends Customer {
   }
 
   @Override
-  public ArrayList<Object> getCarList(){
+  public ArrayList<Car> getCarList(){
     return carList;
   }
 
