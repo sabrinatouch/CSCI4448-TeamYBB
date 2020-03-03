@@ -72,9 +72,7 @@ public class Casual extends Customer {
 
   @Override
   public void resetList(){
-    for(int i = 0; i < this.carList.size(); i++){
-      this.carList.remove(i);
-    }
+    this.carList.clear();
   }
 
   @Override

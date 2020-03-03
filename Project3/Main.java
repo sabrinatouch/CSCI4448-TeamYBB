@@ -102,7 +102,6 @@ public class Main
     // Making a list of all the customer objects
     ArrayList<Customer> listofCustomers = new ArrayList<Customer>();
     ArrayList<Customer> rentingCustomers = new ArrayList<Customer>();
-    ArrayList<String> completedRentals = new ArrayList<String>();
     ArrayList<String> activeRentals = new ArrayList<String>();
 
     listofCustomers.add(customer1);
@@ -130,6 +129,9 @@ public class Main
     }
 
     while(num_day <= 35){
+
+      ArrayList<String> completedRentals = new ArrayList<String>();
+
       System.out.println("");
       System.out.println("|-------------------------------------------------------------------------|");
       System.out.println("");
@@ -171,7 +173,7 @@ public class Main
               Car rentalCar = store.removeCar();
               tempCustomer.addList(rentalCar);
               //System.out.println(rentalCar);
-              System.out.println("Store Capacity: " + store.getCapacity());
+              //System.out.println("Store Capacity: " + store.getCapacity());
               rentalCar.setCost(tempCustomer.getDays());
               if(Radio){
                 rentalCar = new Radio(rentalCar);
@@ -182,7 +184,7 @@ public class Main
               if(CSeat){
                 rentalCar = new CarSeat(rentalCar);
               }
-
+              System.out.println("");
               System.out.println("Rental Car going into list: " + rentalCar);
               tempCustomer.setCapacity(1);
               sentence += rentalCar.getDescription() + " ";
@@ -210,12 +212,15 @@ public class Main
           ArrayList<Car> currentCars = new ArrayList<Car>();
           currentCars = Current.getCarList();
 
+          System.out.println("");
           System.out.println("Current Cars: " + currentCars);
 
           for(int j = 0; j < currentCars.size(); j++){
+            System.out.println("");
             System.out.println("Name of returning Car:" + currentCars.get(j).getName());
 
             Car returningCar = currentCars.get(j);
+            System.out.println("");
             System.out.println("Returning Car: " + returningCar);
             sentence += returningCar.getDescription();
             sentence += returningCar.getCost();
@@ -234,6 +239,8 @@ public class Main
           completedRentals.add(sentence);
 
           Current.resetList();
+          System.out.println("List after deleting: " + Current.getCarList());
+
           Current.resetCapacity();
           Current.resetDays();
 
@@ -245,12 +252,14 @@ public class Main
 
       }
 
+      System.out.println("");
       System.out.println("Completed Rentals Count: " + completedRentals.size());
 
       for(int i = 0; i < completedRentals.size(); i++){
         System.out.println(completedRentals.get(i));
       }
 
+      System.out.println("");
       System.out.println("Active Rentals Count: " + activeRentals.size());
 
       for(int i = 0; i < activeRentals.size(); i++){

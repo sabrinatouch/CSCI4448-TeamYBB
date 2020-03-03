@@ -69,9 +69,7 @@ public class Business extends Customer {
 
   @Override
   public void resetList(){
-    for(int i = 0; i < carList.size(); i++){
-      this.carList.remove(i);
-    }
+    this.carList.clear();
   }
 
   @Override
