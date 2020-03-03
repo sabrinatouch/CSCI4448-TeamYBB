@@ -1,0 +1,1044 @@
+
+|-------------------------------------------------------------------------|
+
+DAY #:1
+
+DAILY COMPLETED RENTALS COUNT: 0
+
+DAILY ACTIVE RENTALS COUNT: 3
+	1. Customer Name: John
+	License Plate: [SUV@681a9515, SUV@3af49f1c, SUV@19469ea2]
+
+	2. Customer Name: James
+	License Plate: [SUV@13221655]
+
+	3. Customer Name: Suebin
+	License Plate: [SUV@2f2c9b19]
+
+DAILY REVENUE: $2200
+
+|-------------------------------------------------------------------------|
+
+DAY #:2
+
+DAILY COMPLETED RENTALS COUNT: 0
+
+DAILY ACTIVE RENTALS COUNT: 8
+	1. Customer Name: John
+	License Plate: [SUV@681a9515, SUV@3af49f1c, SUV@19469ea2]
+
+	2. Customer Name: James
+	License Plate: [SUV@13221655]
+
+	3. Customer Name: Suebin
+	License Plate: [SUV@2f2c9b19]
+
+	4. Customer Name: Tom
+	License Plate: [Minivan@31befd9f, Minivan@1c20c684, Minivan@1fb3ebeb]
+
+	5. Customer Name: Andy
+	License Plate: [Minivan@548c4f57]
+
+	6. Customer Name: Luke
+	License Plate: [Minivan@1218025c, Luxury@816f27d, Luxury@87aac27]
+
+	7. Customer Name: Eric
+	License Plate: [Luxury@3e3abc88]
+
+	8. Customer Name: Bob
+	License Plate: [Luxury@6ce253f1]
+
+DAILY REVENUE: $2690
+
+|-------------------------------------------------------------------------|
+
+DAY #:3
+
+DAILY COMPLETED RENTALS COUNT: 3
+	Suebin0SUV127SUV100
+	Andy0MIN126Minivan120LUX127Luxury40
+	James0SUV126SUV150ECO127Economy20
+
+DAILY ACTIVE RENTALS COUNT: 7
+	1. Customer Name: John
+	License Plate: [SUV@681a9515, SUV@3af49f1c, SUV@19469ea2]
+
+	2. Customer Name: Tom
+	License Plate: [Minivan@31befd9f, Minivan@1c20c684, Minivan@1fb3ebeb]
+
+	3. Customer Name: Luke
+	License Plate: [Minivan@1218025c, Luxury@816f27d, Luxury@87aac27]
+
+	4. Customer Name: Eric
+	License Plate: [Luxury@3e3abc88, Economy@53d8d10a]
+
+	5. Customer Name: Bob
+	License Plate: [Luxury@6ce253f1]
+
+	6. Customer Name: Josh
+	License Plate: [Economy@e9e54c2, Economy@65ab7765, Economy@1b28cdfa]
+
+	7. Customer Name: Eric
+	License Plate: [Luxury@3e3abc88, Economy@53d8d10a]
+
+DAILY REVENUE: $1145
+
+|-------------------------------------------------------------------------|
+
+DAY #:4
+
+DAILY COMPLETED RENTALS COUNT: 1
+	Eric0LUX125Luxury120ECO126Economy40
+
+DAILY ACTIVE RENTALS COUNT: 7
+	1. Customer Name: John
+	License Plate: [SUV@681a9515, SUV@3af49f1c, SUV@19469ea2]
+
+	2. Customer Name: James
+	License Plate: [Standard@eed1f14]
+
+	3. Customer Name: Tom
+	License Plate: [Minivan@31befd9f, Minivan@1c20c684, Minivan@1fb3ebeb]
+
+	4. Customer Name: Luke
+	License Plate: [Minivan@1218025c, Luxury@816f27d, Luxury@87aac27]
+
+	5. Customer Name: Bob
+	License Plate: [Luxury@6ce253f1]
+
+	6. Customer Name: Josh
+	License Plate: [Economy@e9e54c2, Economy@65ab7765, Economy@1b28cdfa]
+
+	7. Customer Name: James
+	License Plate: [Standard@eed1f14]
+
+DAILY REVENUE: $265
+
+|-------------------------------------------------------------------------|
+
+DAY #:5
+
+DAILY COMPLETED RENTALS COUNT: 2
+	Bob0LUX126Luxury120
+	James0STA123Standard90
+
+DAILY ACTIVE RENTALS COUNT: 7
+	1. Customer Name: John
+	License Plate: [SUV@681a9515, SUV@3af49f1c, SUV@19469ea2]
+
+	2. Customer Name: Tom
+	License Plate: [Minivan@31befd9f, Minivan@1c20c684, Minivan@1fb3ebeb]
+
+	3. Customer Name: Luke
+	License Plate: [Minivan@1218025c, Luxury@816f27d, Luxury@87aac27]
+
+	4. Customer Name: Josh
+	License Plate: [Economy@e9e54c2, Economy@65ab7765, Economy@1b28cdfa]
+
+	5. Customer Name: Justin
+	License Plate: [Standard@7229724f]
+
+	6. Customer Name: Joe
+	License Plate: [Standard@4c873330, Standard@119d7047]
+
+	7. Customer Name: Suebin
+	License Plate: [SUV@776ec8df]
+
+DAILY REVENUE: $750
+
+|-------------------------------------------------------------------------|
+
+DAY #:6
+
+DAILY COMPLETED RENTALS COUNT: 1
+	Andy0LUX127Luxury0
+
+DAILY ACTIVE RENTALS COUNT: 8
+	1. Customer Name: John
+	License Plate: [SUV@681a9515, SUV@3af49f1c, SUV@19469ea2]
+
+	2. Customer Name: Tom
+	License Plate: [Minivan@31befd9f, Minivan@1c20c684, Minivan@1fb3ebeb]
+
+	3. Customer Name: Luke
+	License Plate: [Minivan@1218025c, Luxury@816f27d, Luxury@87aac27]
+
+	4. Customer Name: Josh
+	License Plate: [Economy@e9e54c2, Economy@65ab7765, Economy@1b28cdfa]
+
+	5. Customer Name: Justin
+	License Plate: [Standard@7229724f, Minivan@4eec7777]
+
+	6. Customer Name: Joe
+	License Plate: [Standard@4c873330, Standard@119d7047]
+
+	7. Customer Name: Suebin
+	License Plate: [SUV@776ec8df]
+
+	8. Customer Name: Justin
+	License Plate: [Standard@7229724f, Minivan@4eec7777]
+
+DAILY REVENUE: $355
+
+|-------------------------------------------------------------------------|
+
+DAY #:7
+
+DAILY COMPLETED RENTALS COUNT: 4
+	Tom0MIN123Minivan300MIN124Minivan300MIN125Minivan300
+	Eric0
+	Suebin0SUV127SUV100SUV126SUV0
+	Justin0STA124Standard120MIN126Minivan180
+
+DAILY ACTIVE RENTALS COUNT: 4
+	1. Customer Name: John
+	License Plate: [SUV@681a9515, SUV@3af49f1c, SUV@19469ea2]
+
+	2. Customer Name: Luke
+	License Plate: [Minivan@1218025c, Luxury@816f27d, Luxury@87aac27]
+
+	3. Customer Name: Josh
+	License Plate: [Economy@e9e54c2, Economy@65ab7765, Economy@1b28cdfa]
+
+	4. Customer Name: Joe
+	License Plate: [Standard@4c873330, Standard@119d7047]
+
+DAILY REVENUE: $75
+
+|-------------------------------------------------------------------------|
+
+DAY #:8
+
+DAILY COMPLETED RENTALS COUNT: 4
+	John0SUV123SUV350SUV124SUV350SUV125SUV350
+	Joe0STA125Standard90STA126Standard90
+	Andy0ECO127Economy0
+	James0LUX125Luxury40
+
+DAILY ACTIVE RENTALS COUNT: 5
+	1. Customer Name: Luke
+	License Plate: [Minivan@1218025c, Luxury@816f27d, Luxury@87aac27]
+
+	2. Customer Name: Josh
+	License Plate: [Economy@e9e54c2, Economy@65ab7765, Economy@1b28cdfa]
+
+	3. Customer Name: Justin
+	License Plate: [Economy@3b07d329]
+
+	4. Customer Name: Justin
+	License Plate: [Economy@3b07d329]
+
+	5. Customer Name: Eric
+	License Plate: [Luxury@41629346]
+
+DAILY REVENUE: $790
+
+|-------------------------------------------------------------------------|
+
+DAY #:9
+
+DAILY COMPLETED RENTALS COUNT: 2
+	Luke0MIN127Minivan420LUX123Luxury280LUX124Luxury280
+	Suebin0
+
+DAILY ACTIVE RENTALS COUNT: 7
+	1. Customer Name: James
+	License Plate: [Standard@404b9385]
+
+	2. Customer Name: Josh
+	License Plate: [Economy@e9e54c2, Economy@65ab7765, Economy@1b28cdfa]
+
+	3. Customer Name: Justin
+	License Plate: [Economy@3b07d329]
+
+	4. Customer Name: Justin
+	License Plate: [Economy@3b07d329]
+
+	5. Customer Name: Eric
+	License Plate: [Luxury@41629346]
+
+	6. Customer Name: James
+	License Plate: [Standard@404b9385]
+
+	7. Customer Name: Joe
+	License Plate: [Luxury@6d311334, Minivan@682a0b20]
+
+DAILY REVENUE: $815
+
+|-------------------------------------------------------------------------|
+
+DAY #:10
+
+DAILY COMPLETED RENTALS COUNT: 4
+	Josh0ECO123Economy140ECO124Economy140ECO125Economy140
+	Justin0ECO126Economy80MIN124Minivan0
+	Andy0
+	James0STA123Standard90
+
+DAILY ACTIVE RENTALS COUNT: 5
+	1. Customer Name: Eric
+	License Plate: [Luxury@41629346]
+
+	2. Customer Name: Joe
+	License Plate: [Luxury@6d311334, Minivan@682a0b20]
+
+	3. Customer Name: Suebin
+	License Plate: [Minivan@3d075dc0]
+
+	4. Customer Name: John
+	License Plate: [SUV@214c265e, SUV@448139f0, Standard@7cca494b]
+
+	5. Customer Name: Sabs
+	License Plate: [Minivan@7ba4f24f, SUV@3b9a45b3, SUV@7699a589]
+
+DAILY REVENUE: $3275
+
+|-------------------------------------------------------------------------|
+
+DAY #:11
+
+DAILY COMPLETED RENTALS COUNT: 2
+	Eric0LUX126Luxury120STA125Standard0
+	Justin0ECO127Economy40
+
+DAILY ACTIVE RENTALS COUNT: 6
+	1. Customer Name: Joe
+	License Plate: [Luxury@6d311334, Minivan@682a0b20]
+
+	2. Customer Name: Suebin
+	License Plate: [Minivan@3d075dc0]
+
+	3. Customer Name: John
+	License Plate: [SUV@214c265e, SUV@448139f0, Standard@7cca494b]
+
+	4. Customer Name: Sabs
+	License Plate: [Minivan@7ba4f24f, SUV@3b9a45b3, SUV@7699a589]
+
+	5. Customer Name: Bob
+	License Plate: [SUV@58372a00]
+
+	6. Customer Name: Andy
+	License Plate: [Standard@4dd8dc3]
+
+DAILY REVENUE: $675
+
+|-------------------------------------------------------------------------|
+
+DAY #:12
+
+DAILY COMPLETED RENTALS COUNT: 2
+	Joe0LUX127Luxury120MIN123Minivan180
+	Suebin0MIN125Minivan120
+
+DAILY ACTIVE RENTALS COUNT: 7
+	1. Customer Name: Justin
+	License Plate: [Luxury@6d03e736]
+
+	2. Customer Name: Justin
+	License Plate: [Luxury@6d03e736]
+
+	3. Customer Name: John
+	License Plate: [SUV@214c265e, SUV@448139f0, Standard@7cca494b]
+
+	4. Customer Name: Sabs
+	License Plate: [Minivan@7ba4f24f, SUV@3b9a45b3, SUV@7699a589]
+
+	5. Customer Name: Bob
+	License Plate: [SUV@58372a00]
+
+	6. Customer Name: Andy
+	License Plate: [Standard@4dd8dc3]
+
+	7. Customer Name: Justin
+	License Plate: [Luxury@6d03e736]
+
+DAILY REVENUE: $260
+
+|-------------------------------------------------------------------------|
+
+DAY #:13
+
+DAILY COMPLETED RENTALS COUNT: 3
+	Justin0LUX125Luxury160
+	Andy0STA126Standard60LUX124Luxury0
+	Eric0MIN127Minivan60
+
+DAILY ACTIVE RENTALS COUNT: 4
+	1. Customer Name: John
+	License Plate: [SUV@214c265e, SUV@448139f0, Standard@7cca494b]
+
+	2. Customer Name: Sabs
+	License Plate: [Minivan@7ba4f24f, SUV@3b9a45b3, SUV@7699a589]
+
+	3. Customer Name: Bob
+	License Plate: [SUV@58372a00]
+
+	4. Customer Name: Suebin
+	License Plate: [Luxury@568db2f2]
+
+DAILY REVENUE: $690
+
+|-------------------------------------------------------------------------|
+
+DAY #:14
+
+DAILY COMPLETED RENTALS COUNT: 2
+	James0
+	Bob0SUV125SUV150
+
+DAILY ACTIVE RENTALS COUNT: 7
+	1. Customer Name: John
+	License Plate: [SUV@214c265e, SUV@448139f0, Standard@7cca494b]
+
+	2. Customer Name: Sabs
+	License Plate: [Minivan@7ba4f24f, SUV@3b9a45b3, SUV@7699a589]
+
+	3. Customer Name: Eric
+	License Plate: [Economy@378bf509]
+
+	4. Customer Name: Suebin
+	License Plate: [Luxury@568db2f2]
+
+	5. Customer Name: Eric
+	License Plate: [Economy@378bf509]
+
+	6. Customer Name: Josh
+	License Plate: [Economy@5fd0d5ae, Economy@2d98a335, Economy@16b98e56]
+
+	7. Customer Name: Joe
+	License Plate: [Minivan@7ef20235, Standard@27d6c5e0]
+
+DAILY REVENUE: $1750
+
+|-------------------------------------------------------------------------|
+
+DAY #:15
+
+DAILY COMPLETED RENTALS COUNT: 4
+	Justin0LUX126Luxury40
+	Suebin0LUX123Luxury80
+	Andy0
+	Eric0ECO123Economy60
+
+DAILY ACTIVE RENTALS COUNT: 5
+	1. Customer Name: John
+	License Plate: [SUV@214c265e, SUV@448139f0, Standard@7cca494b]
+
+	2. Customer Name: Sabs
+	License Plate: [Minivan@7ba4f24f, SUV@3b9a45b3, SUV@7699a589]
+
+	3. Customer Name: Josh
+	License Plate: [Economy@5fd0d5ae, Economy@2d98a335, Economy@16b98e56]
+
+	4. Customer Name: Joe
+	License Plate: [Minivan@7ef20235, Standard@27d6c5e0]
+
+	5. Customer Name: James
+	License Plate: [Standard@4f3f5b24]
+
+DAILY REVENUE: $380
+
+|-------------------------------------------------------------------------|
+
+DAY #:16
+
+DAILY COMPLETED RENTALS COUNT: 0
+
+DAILY ACTIVE RENTALS COUNT: 6
+	1. Customer Name: John
+	License Plate: [SUV@214c265e, SUV@448139f0, Standard@7cca494b]
+
+	2. Customer Name: Sabs
+	License Plate: [Minivan@7ba4f24f, SUV@3b9a45b3, SUV@7699a589]
+
+	3. Customer Name: Josh
+	License Plate: [Economy@5fd0d5ae, Economy@2d98a335, Economy@16b98e56]
+
+	4. Customer Name: Joe
+	License Plate: [Minivan@7ef20235, Standard@27d6c5e0]
+
+	5. Customer Name: James
+	License Plate: [Standard@4f3f5b24]
+
+	6. Customer Name: Tom
+	License Plate: [Economy@15aeb7ab, Luxury@7b23ec81, Minivan@6acbcfc0]
+
+DAILY REVENUE: $950
+
+|-------------------------------------------------------------------------|
+
+DAY #:17
+
+DAILY COMPLETED RENTALS COUNT: 4
+	John0SUV127SUV350SUV126SUV350STA124Standard210
+	Sabs0MIN126Minivan420SUV123SUV350SUV124SUV350
+	Joe0MIN124Minivan180STA123Standard90
+	Justin0STA126Standard30
+
+DAILY ACTIVE RENTALS COUNT: 6
+	1. Customer Name: Eric
+	License Plate: [Minivan@5f184fc6]
+
+	2. Customer Name: Josh
+	License Plate: [Economy@5fd0d5ae, Economy@2d98a335, Economy@16b98e56]
+
+	3. Customer Name: James
+	License Plate: [Standard@4f3f5b24]
+
+	4. Customer Name: Tom
+	License Plate: [Economy@15aeb7ab, Luxury@7b23ec81, Minivan@6acbcfc0]
+
+	5. Customer Name: Eric
+	License Plate: [Minivan@5f184fc6]
+
+	6. Customer Name: Andy
+	License Plate: [Luxury@3feba861]
+
+DAILY REVENUE: $430
+
+|-------------------------------------------------------------------------|
+
+DAY #:18
+
+DAILY COMPLETED RENTALS COUNT: 2
+	Eric0MIN125Minivan120LUX124Luxury0
+	James0STA125Standard90
+
+DAILY ACTIVE RENTALS COUNT: 8
+	1. Customer Name: Justin
+	License Plate: [Luxury@5b480cf9]
+
+	2. Customer Name: Josh
+	License Plate: [Economy@5fd0d5ae, Economy@2d98a335, Economy@16b98e56]
+
+	3. Customer Name: Tom
+	License Plate: [Economy@15aeb7ab, Luxury@7b23ec81, Minivan@6acbcfc0]
+
+	4. Customer Name: Andy
+	License Plate: [Luxury@3feba861]
+
+	5. Customer Name: Justin
+	License Plate: [Luxury@5b480cf9]
+
+	6. Customer Name: Joe
+	License Plate: [Minivan@6f496d9f, SUV@723279cf]
+
+	7. Customer Name: Justin
+	License Plate: [Luxury@5b480cf9]
+
+	8. Customer Name: Sabs
+	License Plate: [Luxury@10f87f48, Economy@b4c966a, SUV@2f4d3709]
+
+DAILY REVENUE: $1670
+
+|-------------------------------------------------------------------------|
+
+DAY #:19
+
+DAILY COMPLETED RENTALS COUNT: 3
+	Justin0LUX126Luxury120
+	Andy0LUX125Luxury80
+	Eric0
+
+DAILY ACTIVE RENTALS COUNT: 6
+	1. Customer Name: Josh
+	License Plate: [Economy@5fd0d5ae, Economy@2d98a335, Economy@16b98e56]
+
+	2. Customer Name: Tom
+	License Plate: [Economy@15aeb7ab, Luxury@7b23ec81, Minivan@6acbcfc0]
+
+	3. Customer Name: Joe
+	License Plate: [Minivan@6f496d9f, SUV@723279cf]
+
+	4. Customer Name: Sabs
+	License Plate: [Luxury@10f87f48, Economy@b4c966a, SUV@2f4d3709]
+
+	5. Customer Name: James
+	License Plate: [SUV@4e50df2e]
+
+	6. Customer Name: Bob
+	License Plate: [Standard@1d81eb93]
+
+DAILY REVENUE: $390
+
+|-------------------------------------------------------------------------|
+
+DAY #:20
+
+DAILY COMPLETED RENTALS COUNT: 1
+	Justin0MIN124Minivan120
+
+DAILY ACTIVE RENTALS COUNT: 9
+	1. Customer Name: Josh
+	License Plate: [Economy@5fd0d5ae, Economy@2d98a335, Economy@16b98e56]
+
+	2. Customer Name: Tom
+	License Plate: [Economy@15aeb7ab, Luxury@7b23ec81, Minivan@6acbcfc0]
+
+	3. Customer Name: Eric
+	License Plate: [Standard@7291c18f]
+
+	4. Customer Name: Joe
+	License Plate: [Minivan@6f496d9f, SUV@723279cf]
+
+	5. Customer Name: Sabs
+	License Plate: [Luxury@10f87f48, Economy@b4c966a, SUV@2f4d3709]
+
+	6. Customer Name: James
+	License Plate: [SUV@4e50df2e]
+
+	7. Customer Name: Bob
+	License Plate: [Standard@1d81eb93]
+
+	8. Customer Name: Luke
+	License Plate: [Minivan@34a245ab, SUV@7cc355be, SUV@6e8cf4c6]
+
+	9. Customer Name: Eric
+	License Plate: [Standard@7291c18f]
+
+DAILY REVENUE: $1680
+
+|-------------------------------------------------------------------------|
+
+DAY #:21
+
+DAILY COMPLETED RENTALS COUNT: 5
+	Josh0ECO124Economy140ECO125Economy140ECO126Economy140
+	Tom0ECO127Economy100LUX127Luxury200MIN123Minivan300
+	Joe0MIN127Minivan180SUV125SUV150
+	Eric0STA123Standard90
+	James0SUV126SUV150STA126Standard30
+
+DAILY ACTIVE RENTALS COUNT: 3
+	1. Customer Name: Sabs
+	License Plate: [Luxury@10f87f48, Economy@b4c966a, SUV@2f4d3709]
+
+	2. Customer Name: Bob
+	License Plate: [Standard@1d81eb93]
+
+	3. Customer Name: Luke
+	License Plate: [Minivan@34a245ab, SUV@7cc355be, SUV@6e8cf4c6]
+
+DAILY REVENUE: $130
+
+|-------------------------------------------------------------------------|
+
+DAY #:22
+
+DAILY COMPLETED RENTALS COUNT: 2
+	Bob0STA124Standard90
+	Justin0MIN125Minivan120
+
+DAILY ACTIVE RENTALS COUNT: 4
+	1. Customer Name: Sabs
+	License Plate: [Luxury@10f87f48, Economy@b4c966a, SUV@2f4d3709]
+
+	2. Customer Name: Luke
+	License Plate: [Minivan@34a245ab, SUV@7cc355be, SUV@6e8cf4c6]
+
+	3. Customer Name: Suebin
+	License Plate: [Luxury@12edcd21]
+
+	4. Customer Name: Joe
+	License Plate: [Standard@34c45dca, Luxury@52cc8049]
+
+DAILY REVENUE: $710
+
+|-------------------------------------------------------------------------|
+
+DAY #:23
+
+DAILY COMPLETED RENTALS COUNT: 1
+	Suebin0LUX124Luxury80ECO125Economy20
+
+DAILY ACTIVE RENTALS COUNT: 6
+	1. Customer Name: Eric
+	License Plate: [Economy@5b6f7412]
+
+	2. Customer Name: Sabs
+	License Plate: [Luxury@10f87f48, Economy@b4c966a, SUV@2f4d3709]
+
+	3. Customer Name: Luke
+	License Plate: [Minivan@34a245ab, SUV@7cc355be, SUV@6e8cf4c6]
+
+	4. Customer Name: Joe
+	License Plate: [Standard@34c45dca, Luxury@52cc8049]
+
+	5. Customer Name: Josh
+	License Plate: [Luxury@27973e9b, Minivan@312b1dae, Economy@7530d0a]
+
+	6. Customer Name: Eric
+	License Plate: [Economy@5b6f7412]
+
+DAILY REVENUE: $1675
+
+|-------------------------------------------------------------------------|
+
+DAY #:24
+
+DAILY COMPLETED RENTALS COUNT: 1
+	Eric0ECO126Economy40
+
+DAILY ACTIVE RENTALS COUNT: 4
+	1. Customer Name: Sabs
+	License Plate: [Luxury@10f87f48, Economy@b4c966a, SUV@2f4d3709]
+
+	2. Customer Name: Luke
+	License Plate: [Minivan@34a245ab, SUV@7cc355be, SUV@6e8cf4c6]
+
+	3. Customer Name: Joe
+	License Plate: [Standard@34c45dca, Luxury@52cc8049]
+
+	4. Customer Name: Josh
+	License Plate: [Luxury@27973e9b, Minivan@312b1dae, Economy@7530d0a]
+
+DAILY REVENUE: $0
+
+|-------------------------------------------------------------------------|
+
+DAY #:25
+
+DAILY COMPLETED RENTALS COUNT: 4
+	Justin0
+	Sabs0LUX123Luxury280ECO123Economy140SUV127SUV350
+	James0
+	Joe0STA125Standard90LUX126Luxury120
+
+DAILY ACTIVE RENTALS COUNT: 3
+	1. Customer Name: Luke
+	License Plate: [Minivan@34a245ab, SUV@7cc355be, SUV@6e8cf4c6]
+
+	2. Customer Name: Josh
+	License Plate: [Luxury@27973e9b, Minivan@312b1dae, Economy@7530d0a]
+
+	3. Customer Name: Tom
+	License Plate: [Economy@27bc2616, Luxury@3941a79c, Minivan@506e1b77]
+
+DAILY REVENUE: $1150
+
+|-------------------------------------------------------------------------|
+
+DAY #:26
+
+DAILY COMPLETED RENTALS COUNT: 2
+	Suebin0
+	Eric0MIN127Minivan60
+
+DAILY ACTIVE RENTALS COUNT: 9
+	1. Customer Name: Justin
+	License Plate: [Luxury@4fca772d]
+
+	2. Customer Name: Luke
+	License Plate: [Minivan@34a245ab, SUV@7cc355be, SUV@6e8cf4c6]
+
+	3. Customer Name: Josh
+	License Plate: [Luxury@27973e9b, Minivan@312b1dae, Economy@7530d0a]
+
+	4. Customer Name: Tom
+	License Plate: [Economy@27bc2616, Luxury@3941a79c, Minivan@506e1b77]
+
+	5. Customer Name: Sabs
+	License Plate: [SUV@9807454, Standard@3d494fbf, SUV@1ddc4ec2]
+
+	6. Customer Name: Joe
+	License Plate: [Standard@133314b, Standard@b1bc7ed]
+
+	7. Customer Name: Bob
+	License Plate: [Minivan@7cd84586]
+
+	8. Customer Name: Justin
+	License Plate: [Luxury@4fca772d]
+
+	9. Customer Name: Andy
+	License Plate: [Economy@30dae81]
+
+DAILY REVENUE: $2540
+
+|-------------------------------------------------------------------------|
+
+DAY #:27
+
+DAILY COMPLETED RENTALS COUNT: 2
+	Luke0MIN126Minivan420SUV123SUV350SUV124SUV350
+	Justin0LUX124Luxury120
+
+DAILY ACTIVE RENTALS COUNT: 9
+	1. Customer Name: Josh
+	License Plate: [Luxury@27973e9b, Minivan@312b1dae, Economy@7530d0a]
+
+	2. Customer Name: Eric
+	License Plate: [Economy@1b2c6ec2]
+
+	3. Customer Name: Tom
+	License Plate: [Economy@27bc2616, Luxury@3941a79c, Minivan@506e1b77]
+
+	4. Customer Name: Sabs
+	License Plate: [SUV@9807454, Standard@3d494fbf, SUV@1ddc4ec2]
+
+	5. Customer Name: Joe
+	License Plate: [Standard@133314b, Standard@b1bc7ed]
+
+	6. Customer Name: Bob
+	License Plate: [Minivan@7cd84586]
+
+	7. Customer Name: Andy
+	License Plate: [Economy@30dae81]
+
+	8. Customer Name: Eric
+	License Plate: [Economy@1b2c6ec2]
+
+	9. Customer Name: Suebin
+	License Plate: [Luxury@4edde6e5]
+
+DAILY REVENUE: $290
+
+|-------------------------------------------------------------------------|
+
+DAY #:28
+
+DAILY COMPLETED RENTALS COUNT: 2
+	Andy0ECO125Economy40
+	Eric0ECO126Economy60
+
+DAILY ACTIVE RENTALS COUNT: 8
+	1. Customer Name: Josh
+	License Plate: [Luxury@27973e9b, Minivan@312b1dae, Economy@7530d0a]
+
+	2. Customer Name: Tom
+	License Plate: [Economy@27bc2616, Luxury@3941a79c, Minivan@506e1b77]
+
+	3. Customer Name: Sabs
+	License Plate: [SUV@9807454, Standard@3d494fbf, SUV@1ddc4ec2]
+
+	4. Customer Name: Joe
+	License Plate: [Standard@133314b, Standard@b1bc7ed]
+
+	5. Customer Name: Bob
+	License Plate: [Minivan@7cd84586]
+
+	6. Customer Name: Suebin
+	License Plate: [Luxury@4edde6e5]
+
+	7. Customer Name: James
+	License Plate: [Economy@70177ecd]
+
+	8. Customer Name: Luke
+	License Plate: [SUV@1e80bfe8, Standard@66a29884, Luxury@4769b07b]
+
+DAILY REVENUE: $1675
+
+|-------------------------------------------------------------------------|
+
+DAY #:29
+
+DAILY COMPLETED RENTALS COUNT: 3
+	Joe0STA126Standard90STA124Standard90
+	Bob0MIN125Minivan180
+	Suebin0LUX123Luxury80
+
+DAILY ACTIVE RENTALS COUNT: 8
+	1. Customer Name: Justin
+	License Plate: [Minivan@cc34f4d]
+
+	2. Customer Name: Josh
+	License Plate: [Luxury@27973e9b, Minivan@312b1dae, Economy@7530d0a]
+
+	3. Customer Name: Tom
+	License Plate: [Economy@27bc2616, Luxury@3941a79c, Minivan@506e1b77]
+
+	4. Customer Name: Sabs
+	License Plate: [SUV@9807454, Standard@3d494fbf, SUV@1ddc4ec2]
+
+	5. Customer Name: James
+	License Plate: [Economy@70177ecd, Minivan@17a7cec2]
+
+	6. Customer Name: Luke
+	License Plate: [SUV@1e80bfe8, Standard@66a29884, Luxury@4769b07b]
+
+	7. Customer Name: Justin
+	License Plate: [Minivan@cc34f4d]
+
+	8. Customer Name: James
+	License Plate: [Economy@70177ecd, Minivan@17a7cec2]
+
+DAILY REVENUE: $650
+
+|-------------------------------------------------------------------------|
+
+DAY #:30
+
+DAILY COMPLETED RENTALS COUNT: 4
+	Josh0LUX125Luxury280MIN124Minivan420ECO124Economy140
+	Tom0ECO127Economy100LUX127Luxury200MIN123Minivan300
+	James0ECO123Economy60MIN126Minivan120SUV124SUV0
+	Justin0MIN127Minivan180
+
+DAILY ACTIVE RENTALS COUNT: 4
+	1. Customer Name: Sabs
+	License Plate: [SUV@9807454, Standard@3d494fbf, SUV@1ddc4ec2]
+
+	2. Customer Name: Luke
+	License Plate: [SUV@1e80bfe8, Standard@66a29884, Luxury@4769b07b]
+
+	3. Customer Name: Bob
+	License Plate: [SUV@65b3120a]
+
+	4. Customer Name: John
+	License Plate: [Luxury@6f539caf, Economy@79fc0f2f, Economy@50040f0c]
+
+DAILY REVENUE: $710
+
+|-------------------------------------------------------------------------|
+
+DAY #:31
+
+DAILY COMPLETED RENTALS COUNT: 1
+	James0
+
+DAILY ACTIVE RENTALS COUNT: 8
+	1. Customer Name: Sabs
+	License Plate: [SUV@9807454, Standard@3d494fbf, SUV@1ddc4ec2]
+
+	2. Customer Name: Luke
+	License Plate: [SUV@1e80bfe8, Standard@66a29884, Luxury@4769b07b]
+
+	3. Customer Name: Bob
+	License Plate: [SUV@65b3120a]
+
+	4. Customer Name: John
+	License Plate: [Luxury@6f539caf, Economy@79fc0f2f, Economy@50040f0c]
+
+	5. Customer Name: Joe
+	License Plate: [Standard@2dda6444, Standard@5e9f23b4]
+
+	6. Customer Name: Suebin
+	License Plate: [Minivan@4783da3f]
+
+	7. Customer Name: Andy
+	License Plate: [Luxury@378fd1ac]
+
+	8. Customer Name: Tom
+	License Plate: [Luxury@49097b5d, Minivan@6e2c634b, Economy@37a71e93]
+
+DAILY REVENUE: $1955
+
+|-------------------------------------------------------------------------|
+
+DAY #:32
+
+DAILY COMPLETED RENTALS COUNT: 2
+	Eric0
+	Suebin0MIN125Minivan120ECO127Economy20
+
+DAILY ACTIVE RENTALS COUNT: 7
+	1. Customer Name: Sabs
+	License Plate: [SUV@9807454, Standard@3d494fbf, SUV@1ddc4ec2]
+
+	2. Customer Name: Luke
+	License Plate: [SUV@1e80bfe8, Standard@66a29884, Luxury@4769b07b]
+
+	3. Customer Name: Bob
+	License Plate: [SUV@65b3120a]
+
+	4. Customer Name: John
+	License Plate: [Luxury@6f539caf, Economy@79fc0f2f, Economy@50040f0c]
+
+	5. Customer Name: Joe
+	License Plate: [Standard@2dda6444, Standard@5e9f23b4]
+
+	6. Customer Name: Andy
+	License Plate: [Luxury@378fd1ac]
+
+	7. Customer Name: Tom
+	License Plate: [Luxury@49097b5d, Minivan@6e2c634b, Economy@37a71e93]
+
+DAILY REVENUE: $170
+
+|-------------------------------------------------------------------------|
+
+DAY #:33
+
+DAILY COMPLETED RENTALS COUNT: 3
+	Sabs0SUV125SUV350STA123Standard210SUV126SUV350
+	Bob0SUV123SUV150
+	Andy0LUX123Luxury80MIN123Minivan0
+
+DAILY ACTIVE RENTALS COUNT: 5
+	1. Customer Name: Luke
+	License Plate: [SUV@1e80bfe8, Standard@66a29884, Luxury@4769b07b]
+
+	2. Customer Name: John
+	License Plate: [Luxury@6f539caf, Economy@79fc0f2f, Economy@50040f0c]
+
+	3. Customer Name: Joe
+	License Plate: [Standard@2dda6444, Standard@5e9f23b4]
+
+	4. Customer Name: Tom
+	License Plate: [Luxury@49097b5d, Minivan@6e2c634b, Economy@37a71e93]
+
+	5. Customer Name: Eric
+	License Plate: [Luxury@7e6cbb7a]
+
+DAILY REVENUE: $170
+
+|-------------------------------------------------------------------------|
+
+DAY #:34
+
+DAILY COMPLETED RENTALS COUNT: 2
+	Joe0STA126Standard90STA124Standard90
+	James0ECO123Economy20
+
+DAILY ACTIVE RENTALS COUNT: 4
+	1. Customer Name: Luke
+	License Plate: [SUV@1e80bfe8, Standard@66a29884, Luxury@4769b07b]
+
+	2. Customer Name: John
+	License Plate: [Luxury@6f539caf, Economy@79fc0f2f, Economy@50040f0c]
+
+	3. Customer Name: Tom
+	License Plate: [Luxury@49097b5d, Minivan@6e2c634b, Economy@37a71e93]
+
+	4. Customer Name: Eric
+	License Plate: [Luxury@7e6cbb7a]
+
+DAILY REVENUE: $20
+
+|-------------------------------------------------------------------------|
+
+DAY #:35
+
+DAILY COMPLETED RENTALS COUNT: 4
+	Justin0
+	Luke0SUV127SUV350STA125Standard210LUX126Luxury280
+	Suebin0
+	Andy0
+
+DAILY ACTIVE RENTALS COUNT: 7
+	1. Customer Name: James
+	License Plate: [SUV@7c3df479]
+
+	2. Customer Name: John
+	License Plate: [Luxury@6f539caf, Economy@79fc0f2f, Economy@50040f0c]
+
+	3. Customer Name: Tom
+	License Plate: [Luxury@49097b5d, Minivan@6e2c634b, Economy@37a71e93]
+
+	4. Customer Name: Eric
+	License Plate: [Luxury@7e6cbb7a]
+
+	5. Customer Name: Sabs
+	License Plate: [Minivan@7106e68e, SUV@7eda2dbb, Minivan@6576fe71]
+
+	6. Customer Name: Joe
+	License Plate: [Minivan@76fb509a, Economy@300ffa5d]
+
+	7. Customer Name: James
+	License Plate: [SUV@7c3df479]
+
+DAILY REVENUE: $2105
+
+/-----------------------------------------------/
+END OF SIMULATION REPORT
+	- Total number of rentals: 118
+	- Total money made for the 35 day period: $35185

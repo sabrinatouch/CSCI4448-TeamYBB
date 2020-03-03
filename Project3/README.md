@@ -4,7 +4,7 @@
 Andy Kim, Justin Vuong, Sabrina Touch
 
 ## Instructions
-'''bash
+'''
 javac Main.javac
 java main
 '''
@@ -23,11 +23,13 @@ Customer is an abstract class. For the different types of customers, they are ex
 
 The Customer can add on a GPS, Radio, or CarSeat(s) to their Car. This is done with the decorator pattern that implements Car.
 
-The Store class is then called executing the beginning of the 35-days simulation.
-[More about the store simulation]
+Before beginning the simulation, we also generate the numbers of days and cars the customers will rent since it is different depending on the customer's type.
 
-A Rental class creates an ArrayList that records the information per customer.
+The simulation then begins via a while loop that goes over 35 days.
 
 ## Assumptions
 "At the beginning of each day, print the following..."
 - Did not print at the beginning of Day 1 since nothing has happened yet. Began printing at "beginning of each day" by Day 2.
+
+"All completed rentals... total fee for that rental"
+- Printed each individual returned/completed car rental and its total regardless if it was from the same customer or not.

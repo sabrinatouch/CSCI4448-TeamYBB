@@ -137,7 +137,7 @@ public class Main
       System.out.println("");
       System.out.println("|-------------------------------------------------------------------------|");
       System.out.println("");
-      System.out.println("Day number: " + num_day);
+      System.out.println("DAY #:" + num_day);
 
       //Random seeds for randomly generated numbers.
       Random rand = new Random();
@@ -249,8 +249,8 @@ public class Main
           ArrayList<Car> currentCars = new ArrayList<Car>();
           currentCars = Current.getCarList();
 
-          System.out.println("");
-          System.out.println("Current Cars: " + currentCars);
+          //System.out.println("");
+          //System.out.println("Current Cars: " + currentCars);
 
           //Iterate through the car list.
           for(int j = 0; j < currentCars.size(); j++){
@@ -293,39 +293,56 @@ public class Main
       }
 
       System.out.println("");
-      System.out.println("Completed Rentals Count: " + completedRentals.size());
+      System.out.println("DAILY COMPLETED RENTALS COUNT: " + completedRentals.size());
 
       //Print all completed rentals.
       for(int i = 0; i < completedRentals.size(); i++){
-        System.out.println(completedRentals.get(i));
+        System.out.println("\t" + completedRentals.get(i));
+      }
+
+      //Count number of active rentals
+      int active_rentals_count = 0;
+
+      for(int i = 0; i < rentingCustomers.size(); i++){
+        if(!rentingCustomers.get(i).getCarList().isEmpty()){
+          active_rentals_count += 1;
+        }
       }
 
       System.out.println("");
+      System.out.println("DAILY ACTIVE RENTALS COUNT: " + active_rentals_count);
 
       //At the end of the day, iterate through the renting customers list
       //and if the customer has currently rented out cars, print out their name
       //as well as the cars they have rented out.
+      int counter = 0;
+
       for(int i = 0; i < rentingCustomers.size(); i++){
         if(!rentingCustomers.get(i).getCarList().isEmpty()){
+          counter += 1;
           Customer rentingCustomer = rentingCustomers.get(i);
 
-          System.out.println("Customer Name: " + rentingCustomer.getName());
-          System.out.println("License Plate: " + rentingCustomer.getCarList());
+          System.out.println("\t" + counter + ". Customer Name: " + rentingCustomer.getName());
+          System.out.println("\tLicense Plate: " + rentingCustomer.getCarList());
+          System.out.println("");
         }
       }
 
       //Print the money made by store that day.
-      System.out.println("Revenue for the day: " + revenue);
+      System.out.println("DAILY REVENUE: $" + revenue);
 
       //Increment number of days.
       num_day += 1;
 
     }//end of while.
 
+    System.out.println("");
+    System.out.println("/-----------------------------------------------/");
+    System.out.println("END OF SIMULATION REPORT");
     //Print out the total number of completed rentals made.
-    System.out.println("Total number of rentals: " + completed_rentals);
+    System.out.println("\t- Total number of rentals: " + completed_rentals);
     //Print out the total amount of profit the store has made over 35 days.
-    System.out.println("Total money made for the 35 day period: " + store.getProfit());
+    System.out.println("\t- Total money made for the 35 day period: $" + store.getProfit());
 
   }
 }
