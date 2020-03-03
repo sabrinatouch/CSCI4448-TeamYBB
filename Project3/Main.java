@@ -102,7 +102,6 @@ public class Main
     // Making a list of all the customer objects
     ArrayList<Customer> listofCustomers = new ArrayList<Customer>();
     ArrayList<Customer> rentingCustomers = new ArrayList<Customer>();
-    ArrayList<String> activeRentals = new ArrayList<String>();
 
     listofCustomers.add(customer1);
     listofCustomers.add(customer2);
@@ -191,7 +190,7 @@ public class Main
 
               store.addRevenue(rentalCar.getCost());
               revenue += rentalCar.getCost();
-              activeRentals.add(sentence);
+
             }
           }
         }
@@ -260,10 +259,14 @@ public class Main
       }
 
       System.out.println("");
-      System.out.println("Active Rentals Count: " + activeRentals.size());
 
-      for(int i = 0; i < activeRentals.size(); i++){
-        System.out.println(activeRentals.get(i));
+      for(int i = 0; i < rentingCustomers.size(); i++){
+        if(!rentingCustomers.get(i).getCarList().isEmpty()){
+          Customer rentingCustomer = rentingCustomers.get(i);
+
+          System.out.println("Customer Name: " + rentingCustomer.getName());
+          System.out.println("License Plate: " + rentingCustomer.getCarList());
+        }
       }
 
       //All cars left in the store.
@@ -276,8 +279,8 @@ public class Main
 
     }//end of while.
 
-    //System.out.println("Total number of rentals: " + completed_rentals);
-    //System.out.println("Total money made for the 35 day period: " + store.getProfit());
+    System.out.println("Total number of rentals: " + completed_rentals);
+    System.out.println("Total money made for the 35 day period: " + store.getProfit());
 
   } // void Main
 } //Actual main.
