@@ -21,7 +21,7 @@ public class Economy implements Car {
 
   @Override
   public int getCost(){
-    return cost;
+    return this.cost;
   }
 
   @Override

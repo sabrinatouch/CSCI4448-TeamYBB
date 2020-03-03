@@ -20,7 +20,7 @@ public class Standard implements Car {
 
   @Override
   public int getCost(){
-    return cost;
+    return this.cost;
   }
 
   @Override

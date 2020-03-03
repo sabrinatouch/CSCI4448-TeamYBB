@@ -20,7 +20,7 @@ public class Minivan implements Car {
 
   @Override
   public int getCost(){
-    return cost;
+    return this.cost;
   }
 
   @Override

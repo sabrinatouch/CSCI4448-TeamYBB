@@ -2,7 +2,9 @@ import java.util.Random;
 import java.util.ArrayList;
 
 public class Regular extends Customer {
+  private int original_days;
   private int days;
+  private int num_cars;
   private int capacity = 0;
   private ArrayList<Car> carList = new ArrayList<Car>();
 
@@ -12,9 +14,7 @@ public class Regular extends Customer {
 
   @Override
   public int getNumCars(){
-    Random rand = new Random();
-    int random_number = rand.nextInt(3) + 1;
-    return random_number;
+    return this.num_cars;
   }
 
   @Override
@@ -23,10 +23,18 @@ public class Regular extends Customer {
   }
 
   @Override
+  public void generateNumCars(){
+    Random rand = new Random();
+    int random_number = rand.nextInt(3) + 1;
+    this.num_cars = random_number;
+  }
+
+  @Override
   public void generateDays(){
     Random rand = new Random();
     int random_number = rand.nextInt(3) + 3;
     this.days = random_number;
+    this.original_days = random_number;
   }
 
   @Override
@@ -50,6 +58,11 @@ public class Regular extends Customer {
   }
 
   @Override
+  public void setCapacity(int number){
+    this.capacity += number;
+  }
+
+  @Override
   public void resetCapacity(){
     this.capacity = 0;
   }
@@ -69,6 +82,11 @@ public class Regular extends Customer {
   @Override
   public ArrayList<Car> getCarList(){
     return this.carList;
+  }
+
+  @Override
+  public void resetDays(){
+    this.days = this.original_days;
   }
 
 }

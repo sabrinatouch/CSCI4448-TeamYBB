@@ -103,6 +103,7 @@ public class Main
     ArrayList<Customer> listofCustomers = new ArrayList<Customer>();
     ArrayList<Customer> rentingCustomers = new ArrayList<Customer>();
     ArrayList<String> completedRentals = new ArrayList<String>();
+    ArrayList<String> activeRentals = new ArrayList<String>();
 
     listofCustomers.add(customer1);
     listofCustomers.add(customer2);
@@ -119,40 +120,58 @@ public class Main
 
     int num_day = 1;
     int completed_rentals = 0;
-    ArrayList<String> activeRentals = new ArrayList<String>();
 
-    while(num_day <= 35){
+    //Generate number of days the customers will rent the cars for
+    //and the number of cars the customers will rent.
+    for(int i = 0; i < listofCustomers.size(); i++){
+      Customer currCust = listofCustomers.get(i);
+      currCust.generateDays();
+      currCust.generateNumCars();
+    }
+
+    while(num_day <= 10){
 
       System.out.println("Day number: " + num_day);
-
-      for(int i = 0; i < listofCustomers.size(); i++){
-        Customer currCust = listofCustomers.get(i);
-        currCust.generateDays();
-      }
 
       Random rand = new Random();
       Random rand1 = new Random();
       Random rand2 = new Random();
+      Random rand3 = new Random();
 
       int number_customers = rand.nextInt(12) + 1;
       int revenue = 0;
 
-      //Collections.shuffle(listofCustomers);
+      Collections.shuffle(listofCustomers);
 
       for (int i = 0; i < number_customers; i++){
-        boolean Radio = rand.nextBoolean();
-        boolean Gps = rand1.nextBoolean();
-        boolean CSeat = rand2.nextBoolean();
+        boolean Radio = rand1.nextBoolean();
+        boolean Gps = rand2.nextBoolean();
+        boolean CSeat = rand3.nextBoolean();
 
-        if(store.getCapacity() > 0){
+        if((store.getCapacity() > 0) && (rentingCustomers.size() < 12)){
           Customer tempCustomer = listofCustomers.get(i);
-          if(tempCustomer.getCapacity() + tempCustomer.getNumCars() <= 3 && store.getCapacity() - tempCustomer.getNumCars() > 0){
+          int tempCustomerCapacity = tempCustomer.getCapacity();
+          int tempCustomerNumCars = tempCustomer.getNumCars();
+          int storeCapacity = store.getCapacity();
+
+          //System.out.println("Temp Customer Capacity: " + tempCustomerCapacity);
+          //System.out.println("Temp Customer Capacity plus tempCustomerNumCars: " + (tempCustomerCapacity + tempCustomerNumCars));
+          //System.out.println("Store capacity minus tempCustomerNumCars: " + (storeCapacity - tempCustomerNumCars));
+
+          //Check if the customer is able to rent out their desired number of cars from the store.
+          if((tempCustomerCapacity < 3) && ((tempCustomerCapacity + tempCustomerNumCars) <= 3) && ((storeCapacity - tempCustomerNumCars) >= 0)){
+            //Generate a sentence for the report.
+            //System.out.println("Hello");
+
             String sentence = "";
 
-            sentence += tempCustomer.getName();
+            sentence += tempCustomer.getName() + " ";
+            //Add customer to active rental.
+            rentingCustomers.add(tempCustomer);
 
             for(int j = 0; j < tempCustomer.getNumCars(); j++){
               Car rentalCar = store.removeCar();
+              System.out.println("Store Capacity: " + store.getCapacity());
               rentalCar.setCost(tempCustomer.getDays());
               if(Radio){
                 rentalCar = new Radio(rentalCar);
@@ -164,13 +183,15 @@ public class Main
                 rentalCar = new CarSeat(rentalCar);
               }
               tempCustomer.addList(rentalCar);
-              sentence += rentalCar.getDescription();
+              tempCustomer.setCapacity(1);
+              sentence += rentalCar.getDescription() + " ";
 
-              rentingCustomers.add(tempCustomer);
               store.addRevenue(rentalCar.getCost());
               revenue += rentalCar.getCost();
               activeRentals.add(sentence);
             }
+
+
             //Rental newRental = new Rental();
             //newRental.createRental(tempCustomer.getCarList());
 
@@ -178,27 +199,25 @@ public class Main
         }
       }
 
-      int size = rentingCustomers.size();
-      System.out.println(size);
+      Iterator<Customer> iterator = rentingCustomers.iterator();
 
-      for(int i = 0; i < size; i++){
+      while(iterator.hasNext()){
 
-        Customer Current = rentingCustomers.get(i);
+        Customer Current = iterator.next();
 
         if(Current.getDays() == 0){
           String sentence = "";
 
+          /*
           for(int j = 0; j < listofCustomers.size(); j++){
-            System.out.println(listofCustomers.get(j).getName());
-            System.out.println(Current);
             if(listofCustomers.get(j).getName().equals(Current.getName())){
-              System.out.println("Hello");
               Customer currCustomer = listofCustomers.get(j);
             }
           }
+          */
 
-          //sentence += currCustomer.getName();
-          //sentence += currCustomer.getDays();
+          sentence += Current.getName();
+          sentence += Current.getDays();
 
           ArrayList<Car> currentCars = new ArrayList<Car>();
           currentCars = Current.getCarList();
@@ -219,10 +238,15 @@ public class Main
 
           Current.resetList();
           Current.resetCapacity();
-          rentingCustomers.remove(Current);
+          Current.resetDays();
+
+          iterator.remove();
+          System.out.println("Here");
+        }
+        else{
+          Current.decrement();
         }
 
-        Current.decrement();
       }
 
       System.out.println("Completed Rentals Count: " + completedRentals.size());
@@ -246,8 +270,8 @@ public class Main
 
     }//end of while.
 
-    System.out.println("Total number of rentals: " + completed_rentals);
-    System.out.println("Total money made for the 35 day period: " + store.getProfit());
+    //System.out.println("Total number of rentals: " + completed_rentals);
+    //System.out.println("Total money made for the 35 day period: " + store.getProfit());
 
   } // void Main
 } //Actual main.

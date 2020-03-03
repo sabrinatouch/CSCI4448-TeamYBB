@@ -1,7 +1,9 @@
 import java.util.ArrayList;
 
 public class Business extends Customer {
+  private int original_days;
   private int days;
+  private int num_cars;
   private int capacity = 0;
   private ArrayList<Car> carList = new ArrayList<Car>();
 
@@ -11,7 +13,7 @@ public class Business extends Customer {
 
   @Override
   public int getNumCars(){
-    return 3;
+    return this.num_cars = 3;
   }
 
   @Override
@@ -20,8 +22,14 @@ public class Business extends Customer {
   }
 
   @Override
+  public void generateNumCars(){
+    this.num_cars = 3;
+  }
+
+  @Override
   public void generateDays(){
     this.days = 7;
+    this.original_days = 7;
   }
 
   @Override
@@ -45,6 +53,11 @@ public class Business extends Customer {
   }
 
   @Override
+  public void setCapacity(int number){
+    this.capacity += number;
+  }
+
+  @Override
   public void resetCapacity(){
     this.capacity = 0;
   }
@@ -64,6 +77,11 @@ public class Business extends Customer {
   @Override
   public ArrayList<Car> getCarList(){
     return this.carList;
+  }
+
+  @Override
+  public void resetDays(){
+    this.days = this.original_days;
   }
 
 }

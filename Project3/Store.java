@@ -36,7 +36,7 @@ public class Store {
   }
 
   public void printList(){
-    if(availableCars.size() == 0){
+    if(availableCars == null){
       System.out.println("Store Inventory Empty.");
     }
 
