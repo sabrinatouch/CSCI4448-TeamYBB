@@ -113,11 +113,18 @@ public class Main
     Random rand = new Random();
     int number_customers = rand.nextInt(12) + 1;
 
-    while(Store.getCapacity() > 0){
-      Customer tempCustomer;
-      Collections.shuffle(listofCustomers);
-      for (int i = 0; i< number_customers; i++){
-          tempCustomer = listofCustomers.get(i);
+    Collections.shuffle(listofCustomers);
+    for (int i = 0; i < number_customers; i++){
+      if(Store.getCapacity() > 0){
+        Customer tempCustomer = listofCustomers.get(i);
+        if(tempCustomer.getCapacity() + tempCustomer.getNumCars() <= 3 && Store.getCapacity() - tempCustomer.getNumCars() >= 0){
+          for(int i = 0; i < tempCustomer.getNumCars(); i++){
+            
+          }
+          Rental newRental = new Rental();
+          print(newRental.createRental())
+
+        }
       }
     }
 
