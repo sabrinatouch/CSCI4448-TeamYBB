@@ -1,9 +1,9 @@
-import java.util.List;
+import java.util.ArrayList;
 
 public class Store {
   //Private
   private int revenue = 0;
-  private List<Car> availableCars;
+  private ArrayList<Car> availableCars = new ArrayList<Car>();
 
   //Add car to inventory.
   public void addCar(Car car) {
@@ -26,6 +26,17 @@ public class Store {
 
   public int getProfit(){
     return this.revenue;
+  }
+
+  //This is to reset the store's profit for each day.
+  public void resetProfit(){
+    this.revenue = 0;
+  }
+
+  public void printList(){
+    for(int i = 0; i < availableCars.size(); i++){
+      System.out.println(availableCars.get(i).getDescription());
+    }
   }
 
 }

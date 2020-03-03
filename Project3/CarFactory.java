@@ -1,3 +1,7 @@
+//THIS IS AN EXAMPLE OF FACTORY PATTERN.
+//THE FACTORY WILL INSTANTIATE AN INSTANCE OF A CAR
+//BASED ON THE TYPE BEING PASSED IN AS A PARAMETER.
+
 public class CarFactory {
   public Car createCar(String name, String type){
     if(type == null){
