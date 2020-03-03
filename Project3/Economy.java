@@ -10,8 +10,13 @@ public class Economy implements Car {
   }
 
   @Override
-  public String getDescription(){
-    return name + " " + type;
+  public String getName(){
+    return this.name;
+  }
+
+  @Override
+  public String getType(){
+    return this.type;
   }
 
   @Override
