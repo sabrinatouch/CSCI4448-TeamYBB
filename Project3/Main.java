@@ -122,8 +122,8 @@ public class Main
     Random rand = new Random();
     int number_customers = rand.nextInt(12) + 1;
     ArrayList<Customer> rentingCustomers = new ArrayList<Customer>();
-    Collections.shuffle(listofCustomers);
     int revenue = 0;
+    Collections.shuffle(listofCustomers);
     for (int i = 0; i < number_customers; i++){
       boolean Radio = rand.nextBoolean();
       boolean Gps = rand.nextBoolean();
@@ -168,6 +168,9 @@ public class Main
           Car newCar = carFactory.createCar(name, type);
           store.addCar(newCar);
         }
+        Current.resetList();
+        Current.resetCapacity();
+        rentingCustomers.remove(Current);
       }
     }
 
