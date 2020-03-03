@@ -11,8 +11,10 @@ public class Store {
   }
 
   //Remove car from inventory.
-  public void removeCar(Car car) {
-    this.availableCars.remove(car);
+  public Car removeCar() {
+    Car car = this.availableCars.get(0);
+    this.availableCars.remove(0);
+    return car;
   }
 
   //Getter.

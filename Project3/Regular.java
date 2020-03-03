@@ -1,8 +1,10 @@
 import java.util.Random;
+import java.util.ArrayList;
 
 public class Regular extends Customer {
   private int days;
   private int capacity = 0;
+  private ArrayList<Object> carList = new ArrayList <>();
 
   public Regular(String name, String type){
     super(name, type);
@@ -50,6 +52,23 @@ public class Regular extends Customer {
   @Override
   public void resetCapacity(){
     this.capacity = 0;
+  }
+
+  @Override
+  public void addList(Car car){
+    carList.add(car);
+  }
+
+  @Override
+  public void resetList(){
+    for(int i = 0; i < carList.size(); i++){
+      carList.remove(i);
+    }
+  }
+
+  @Override
+  public ArrayList<Object> getCarList(){
+    return carList;
   }
 
 }
