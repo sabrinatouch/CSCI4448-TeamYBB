@@ -149,7 +149,7 @@ public class Main
             revenue += rentalCar.getCost();
           }
           Rental newRental = new Rental();
-          System.out.println(newRental.createRental(tempCustomer.getCarList(), tempCustomer.getDays()));
+          System.out.println(newRental.createRental(tempCustomer.getCarList()));
 
         }
       }
@@ -166,7 +166,7 @@ public class Main
           String name = returningCar.getName();
           String type = returningCar.getType();
           Car newCar = carFactory.createCar(name, type);
-          store.add(newCar);
+          store.addCar(newCar);
         }
       }
     }
