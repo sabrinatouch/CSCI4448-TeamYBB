@@ -36,9 +36,17 @@ public class Store {
   }
 
   public void printList(){
-    for(int i = 0; i < availableCars.size(); i++){
-      System.out.println(availableCars.get(i).getDescription());
+    if(availableCars.size() == 0){
+      System.out.println("Store Inventory Empty.");
     }
+
+    else{
+      for(int i = 0; i < availableCars.size(); i++){
+        System.out.println(availableCars.get(i).getDescription());
+      }
+    }
+
+
   }
 
 }

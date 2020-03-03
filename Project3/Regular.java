@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Regular extends Customer {
   private int days;
   private int capacity = 0;
-  private ArrayList<Car> carList = new ArrayList <>();
+  private ArrayList<Car> carList = new ArrayList<Car>();
 
   public Regular(String name, String type){
     super(name, type);
@@ -56,19 +56,19 @@ public class Regular extends Customer {
 
   @Override
   public void addList(Car car){
-    carList.add(car);
+    this.carList.add(car);
   }
 
   @Override
   public void resetList(){
     for(int i = 0; i < carList.size(); i++){
-      carList.remove(i);
+      this.carList.remove(i);
     }
   }
 
   @Override
   public ArrayList<Car> getCarList(){
-    return carList;
+    return this.carList;
   }
 
 }
