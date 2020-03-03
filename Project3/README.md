@@ -5,7 +5,7 @@ Andy Kim, Justin Vuong, Sabrina Touch
 
 ## Instructions
 ```
-javac Main.javac
+javac Main.java
 java main
 ```
 
