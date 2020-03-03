@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Business extends Customer {
   private int days;
   private int capacity = 0;
-  private ArrayList<Object> carList = new ArrayList <>();
+  private ArrayList<Car> carList = new ArrayList <>();
 
   public Business(String name, String type){
     super(name, type);

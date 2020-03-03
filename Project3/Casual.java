@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class Casual extends Customer {
   private int days;
   private int capacity = 0;
-  private ArrayList<Object> carList = new ArrayList <>();
+  private ArrayList<Car> carList = new ArrayList <>();
 
   public Casual(String name, String type){
     super(name, type);

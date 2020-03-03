@@ -1,12 +1,11 @@
 import java.util.ArrayList;
 public class Rental{
 
-  public ArrayList<Object> createRental(ArrayList<Object> carsRented, int nights){
-    ArrayList<Object> rentals = new ArrayList <>();
+  public ArrayList<Car> createRental(ArrayList<Car> carsRented){
+    ArrayList<Car> rentals = new ArrayList <>();
     for(int i = 0; i < carsRented.size(); i++){
       rentals.add(carsRented.get(i));
     }
-    rentals.add(nights);
     return rentals;
   }
 }
