@@ -4,10 +4,10 @@
 Andy Kim, Justin Vuong, Sabrina Touch
 
 ## Instructions
-'''
+```
 javac Main.javac
 java main
-'''
+```
 
 ## Language and Environment
 Java 13+
