@@ -10,7 +10,12 @@ public class GPS extends CarDecorator{
     return decoratedCar.getDescription() + ", GPS";
   }
 
+  @Override
   public int getCost(){
     return decoratedCar.getCost() + 100;
+  }
+
+  public void setCost(int numDays){
+    return;
   }
 }
