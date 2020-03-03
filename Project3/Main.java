@@ -130,7 +130,9 @@ public class Main
     }
 
     while(num_day <= 10){
-
+      System.out.println("");
+      System.out.println("|-------------------------------------------------------------------------|");
+      System.out.println("");
       System.out.println("Day number: " + num_day);
 
       Random rand = new Random();
