@@ -1,5 +1,8 @@
+//Radio is an add-on to the decorator.
+//Radio adds $50 to the car rental price.
 public class Radio extends CarDecorator{
 
+  //Inherit from Decorator class.
   public Radio(Car newCar) {
     super(newCar);
   }

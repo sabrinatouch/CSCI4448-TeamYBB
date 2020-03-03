@@ -1,8 +1,11 @@
+//Minivan implements from interface Car.
+//Default cost is $60/night.
 public class Minivan implements Car {
   private String name;
   private String type;
   private int cost = 60;
 
+  //Constructor for Minivan.
   public Minivan(String name, String type){
     this.name = name;
     this.type = type;

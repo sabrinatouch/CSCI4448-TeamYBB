@@ -1,13 +1,19 @@
 import java.util.Random;
 import java.util.ArrayList;
 
+//Regular customer rents one to three cars for
+//three to five nights.
 public class Regular extends Customer {
+  //Original_days is used for the defaulted days of rental.
+  //We used this to reset the number of days for rental after
+  //the customer has returned their rentals.
   private int original_days;
   private int days;
   private int num_cars;
   private int capacity = 0;
   private ArrayList<Car> carList = new ArrayList<Car>();
 
+  //Regular customer inherits name and type parameters from Customer class.
   public Regular(String name, String type){
     super(name, type);
   }
@@ -45,11 +51,6 @@ public class Regular extends Customer {
   @Override
   public void decrement(){
     this.days = this.days - 1;
-  }
-
-  @Override
-  public void makeRental(int number){
-    this.capacity += number;
   }
 
   @Override

@@ -1,12 +1,17 @@
 import java.util.ArrayList;
 
+//Business customer rents three cars for seven days.
 public class Business extends Customer {
+  //Original_days is used for the defaulted days of rental.
+  //We used this to reset the number of days for rental after
+  //the customer has returned their rentals.
   private int original_days;
   private int days;
   private int num_cars;
   private int capacity = 0;
   private ArrayList<Car> carList = new ArrayList<Car>();
 
+  //Inheriting name and type parameters from Customer class.
   public Business(String name, String type){
     super(name, type);
   }
@@ -21,11 +26,13 @@ public class Business extends Customer {
     return name;
   }
 
+  //Rents three cars.
   @Override
   public void generateNumCars(){
     this.num_cars = 3;
   }
 
+  //Rents for seven nights.
   @Override
   public void generateDays(){
     this.days = 7;
@@ -40,11 +47,6 @@ public class Business extends Customer {
   @Override
   public void decrement(){
     this.days = this.days - 1;
-  }
-
-  @Override
-  public void makeRental(int number){
-    this.capacity += number;
   }
 
   @Override

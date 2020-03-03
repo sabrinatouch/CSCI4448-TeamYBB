@@ -17,7 +17,7 @@ public class Main
 
     //Initial setup for cars, customers, and store.
 
-    //Instantiate a car factory and create 24 cars of each category.
+    //Instantiate a car factory and create 24 cars that consist of each category.
     CarFactory carFactory = new CarFactory();
 
     Car car1 = carFactory.createCar("SUV123", "SUV");
@@ -77,9 +77,6 @@ public class Main
     store.addCar(car23);
     store.addCar(car24);
 
-    //store.printList();
-    //System.out.println(store.getCapacity());
-
     //Instantiate a Customer factory and create 12 customers with 3 different categories.
     CustomerFactory customerFactory = new CustomerFactory();
 
@@ -101,8 +98,10 @@ public class Main
 
     // Making a list of all the customer objects
     ArrayList<Customer> listofCustomers = new ArrayList<Customer>();
+    // This list holds customers that have currently made car rentals.
     ArrayList<Customer> rentingCustomers = new ArrayList<Customer>();
 
+    //Add all the customers to the list of customers.
     listofCustomers.add(customer1);
     listofCustomers.add(customer2);
     listofCustomers.add(customer3);
@@ -116,6 +115,7 @@ public class Main
     listofCustomers.add(customer11);
     listofCustomers.add(customer12);
 
+    //Start at day 1.
     int num_day = 1;
     int completed_rentals = 0;
 
@@ -127,53 +127,82 @@ public class Main
       currCust.generateNumCars();
     }
 
+    //Create a simulation for 35 days.
     while(num_day <= 35){
 
+      //Create a list to keep track of completed rentals.
       ArrayList<String> completedRentals = new ArrayList<String>();
 
+      //Formatting print statements.
       System.out.println("");
       System.out.println("|-------------------------------------------------------------------------|");
       System.out.println("");
       System.out.println("Day number: " + num_day);
 
+      //Random seeds for randomly generated numbers.
       Random rand = new Random();
       Random rand1 = new Random();
       Random rand2 = new Random();
       Random rand3 = new Random();
 
-      int number_customers = rand.nextInt(12) + 1;
+      //Set the new day's revenue to zero.
       int revenue = 0;
+      //Create a random number of customers that will visit the store that day.
+      int number_customers = rand.nextInt(12) + 1;
 
+      //Shuffle the customer list to ensure we don't keep grabbing
+      //The same customers in order.
       Collections.shuffle(listofCustomers);
 
+      //For each customer, check to see if they can make a car rental to the store.
       for (int i = 0; i < number_customers; i++){
+
+        //Generate a random boolean for each add-on. If true, we will add the option to the car.
         boolean Radio = rand1.nextBoolean();
         boolean Gps = rand2.nextBoolean();
         boolean CSeat = rand3.nextBoolean();
 
+        //A customer can only make a rental if there are cars available in the store.
+        //We will limit the number of customers that are able to make the rental to 12. (since there are 12 customers)
         if((store.getCapacity() > 0) && (rentingCustomers.size() < 12)){
+          //Get the information needed from a given customer,
+          //which includes the customer's capacity, (limit on the cars they can rent)
+          //and the number of cars they can rent.
           Customer tempCustomer = listofCustomers.get(i);
           int tempCustomerCapacity = tempCustomer.getCapacity();
           int tempCustomerNumCars = tempCustomer.getNumCars();
+          //Retrieve the number of cars the store has.
           int storeCapacity = store.getCapacity();
 
           //Check if the customer is able to rent out their desired number of cars from the store.
+          //First, we need to make sure the customer's capacity is less than three,
+          //meaning that they can still rent cars.
+          //Second, we will have to see if this capacity added with their desired number of cars
+          //exceeds three. If it does, the customer cannot make the rental.
+          //Third, we will have to see if the store has as many cars as the customer's desired number of cars.
+          //If all of these conditions are met, the customer is able to make a rental.
           if((tempCustomerCapacity < 3) && ((tempCustomerCapacity + tempCustomerNumCars) <= 3) && ((storeCapacity - tempCustomerNumCars) >= 0)){
-            //Generate a sentence for the report.
-            //System.out.println("Hello");
 
+            //Build a string to print out to the screen.
             String sentence = "";
 
+            //Get the customer's name.
             sentence += tempCustomer.getName() + " ";
+
             //Add customer to active rental.
             rentingCustomers.add(tempCustomer);
 
+            //Make a rental for the number of cars the customer wants to rent.
             for(int j = 0; j < tempCustomer.getNumCars(); j++){
+              //Take out the car from the store.
               Car rentalCar = store.removeCar();
+              //Add the car to the customer's list of car rentals.
               tempCustomer.addList(rentalCar);
-              //System.out.println(rentalCar);
-              //System.out.println("Store Capacity: " + store.getCapacity());
+              //Set the cost of the rental multiplied by the number of days they are renting.
               rentalCar.setCost(tempCustomer.getDays());
+
+              //Check to see if the car comes with the add-ons.
+              //If they do, decorate the rentalCar with the add-ons.
               if(Radio){
                 rentalCar = new Radio(rentalCar);
               }
@@ -183,12 +212,14 @@ public class Main
               if(CSeat){
                 rentalCar = new CarSeat(rentalCar);
               }
-              System.out.println("");
-              System.out.println("Rental Car going into list: " + rentalCar);
+
+              //Increase the customer's capacity. (max for a customer is 3)
               tempCustomer.setCapacity(1);
               sentence += rentalCar.getDescription() + " ";
 
+              //Add the rental cost to the store's revenue.
               store.addRevenue(rentalCar.getCost());
+              //This is to track the daily revenue.
               revenue += rentalCar.getCost();
 
             }
@@ -196,55 +227,65 @@ public class Main
         }
       }
 
+      //Use iterator to iterate through rentingCustomers list.
       Iterator<Customer> iterator = rentingCustomers.iterator();
 
       while(iterator.hasNext()){
 
         Customer Current = iterator.next();
 
+        //If the number of days for a given customer is zero, that means
+        //the rental time has expired and the customer must return all of their cars from
+        //their list of cars they have rented back to the store.
         if(Current.getDays() == 0){
+
+          //Build a string for printing to output.
           String sentence = "";
 
           sentence += Current.getName();
           sentence += Current.getDays();
 
+          //Access the customer's current list of cars they have rented.
           ArrayList<Car> currentCars = new ArrayList<Car>();
           currentCars = Current.getCarList();
 
           System.out.println("");
           System.out.println("Current Cars: " + currentCars);
 
+          //Iterate through the car list.
           for(int j = 0; j < currentCars.size(); j++){
-            System.out.println("");
-            System.out.println("Name of returning Car:" + currentCars.get(j).getName());
 
+            //Grab the instance of the car from the list.
             Car returningCar = currentCars.get(j);
-            System.out.println("");
-            System.out.println("Returning Car: " + returningCar);
             sentence += returningCar.getDescription();
             sentence += returningCar.getCost();
             String name = returningCar.getName();
             String type = returningCar.getType();
-            //System.out.println("Name of new car: " + name);
-            //System.out.println("Type of new car: " + type);
 
+            //Using the name and the type of the returning car, re-create the instance to
+            //add back into the store list.
             Car newCar = carFactory.createCar(name, type);
-            //System.out.println("New Car: " + newCar);
             store.addCar(newCar);
-            //System.out.println(newCar.getDescription());
+
+            //Increment completed rentals.
             completed_rentals += 1;
           }
 
+          //Add the built string to the list of completed Rentals.
           completedRentals.add(sentence);
 
+          //Clear the customer's list.
           Current.resetList();
-          System.out.println("List after deleting: " + Current.getCarList());
-
+          //Reset the customer's capacity.
           Current.resetCapacity();
+          //Reset the number of days the customer can rent for.
           Current.resetDays();
 
+          //Remove the customer from the rentingCustomer list.
           iterator.remove();
         }
+
+        //If the number of days of a customer is not zero yet, decrement it by 1.
         else{
           Current.decrement();
         }
@@ -254,12 +295,16 @@ public class Main
       System.out.println("");
       System.out.println("Completed Rentals Count: " + completedRentals.size());
 
+      //Print all completed rentals.
       for(int i = 0; i < completedRentals.size(); i++){
         System.out.println(completedRentals.get(i));
       }
 
       System.out.println("");
 
+      //At the end of the day, iterate through the renting customers list
+      //and if the customer has currently rented out cars, print out their name
+      //as well as the cars they have rented out.
       for(int i = 0; i < rentingCustomers.size(); i++){
         if(!rentingCustomers.get(i).getCarList().isEmpty()){
           Customer rentingCustomer = rentingCustomers.get(i);
@@ -269,18 +314,18 @@ public class Main
         }
       }
 
-      //All cars left in the store.
-
-      //store.printList();
-
+      //Print the money made by store that day.
       System.out.println("Revenue for the day: " + revenue);
 
+      //Increment number of days.
       num_day += 1;
 
     }//end of while.
 
+    //Print out the total number of completed rentals made.
     System.out.println("Total number of rentals: " + completed_rentals);
+    //Print out the total amount of profit the store has made over 35 days.
     System.out.println("Total money made for the 35 day period: " + store.getProfit());
 
-  } // void Main
-} //Actual main.
+  }
+}

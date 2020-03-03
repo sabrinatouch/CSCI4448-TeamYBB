@@ -1,13 +1,19 @@
 import java.util.Random;
 import java.util.ArrayList;
 
+//Casual customer is a subclass of Customer class.
+//Casual customers rent one car for one to three nights.
 public class Casual extends Customer {
+  //Original_days is used for the defaulted days of rental.
+  //We used this to reset the number of days for rental after
+  //the customer has returned their rentals.
   private int original_days;
   private int days;
   private int num_cars;
   private int capacity = 0;
   private ArrayList<Car> carList = new ArrayList<Car>();
 
+  //Inhering name and type parameters from Customer class.
   public Casual(String name, String type){
     super(name, type);
   }
@@ -22,6 +28,7 @@ public class Casual extends Customer {
     return name;
   }
 
+  //Using random, generate the number of days of rental (1-3).
   @Override
   public void generateDays(){
     Random rand = new Random();
@@ -30,6 +37,7 @@ public class Casual extends Customer {
     this.original_days = random_number;
   }
 
+  //Casual customer rents one car.
   @Override
   public void generateNumCars(){
     this.num_cars = 1;
@@ -43,11 +51,6 @@ public class Casual extends Customer {
   @Override
   public void decrement(){
     this.days = this.days - 1;
-  }
-
-  @Override
-  public void makeRental(int number){
-    this.capacity += number;
   }
 
   @Override
