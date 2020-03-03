@@ -100,13 +100,22 @@ public class Main
 
 
     // Making a list of all the customer objects
-    Customer[] listofCustomers = new Customer[]
-    {
-      customer1, customer2, customer3, customer4, customer5, customer6, customer7, customer8, customer9, customer10, customer11, customer12
-    };
+    ArrayList<Customer> listofCustomers = new ArrayList<Customer>();
+    listofCustomers.add(customer1);
+    listofCustomers.add(customer2);
+    listofCustomers.add(customer3);
+    listofCustomers.add(customer4);
+    listofCustomers.add(customer5);
+    listofCustomers.add(customer6);
+    listofCustomers.add(customer7);
+    listofCustomers.add(customer8);
+    listofCustomers.add(customer9);
+    listofCustomers.add(customer10);
+    listofCustomers.add(customer11);
+    listofCustomers.add(customer12);
 
-    for(int i = 0; i < listofCustomers.length; i++){
-      Customer currCust = listofCustomers[i];
+    for(int i = 0; i < listofCustomers.size(); i++){
+      Customer currCust = listofCustomers.get(i);
       currCust.generateDays();
     }
 
@@ -115,18 +124,20 @@ public class Main
 
     Collections.shuffle(listofCustomers);
     for (int i = 0; i < number_customers; i++){
-      if(Store.getCapacity() > 0){
+      if(store.getCapacity() > 0){
         Customer tempCustomer = listofCustomers.get(i);
-        if(tempCustomer.getCapacity() + tempCustomer.getNumCars() <= 3 && Store.getCapacity() - tempCustomer.getNumCars() >= 0){
-          for(int i = 0; i < tempCustomer.getNumCars(); i++){
-            
+        if(tempCustomer.getCapacity() + tempCustomer.getNumCars() <= 3 && store.getCapacity() - tempCustomer.getNumCars() >= 0){
+          for(int j = 0; i < tempCustomer.getNumCars(); j++){
+            Car rentalCar = store.removeCar();
+            tempCustomer.addList(rentalCar);
           }
           Rental newRental = new Rental();
-          print(newRental.createRental())
+          System.out.println(newRental.createRental(tempCustomer.getCarList(), tempCustomer.getDays()));
 
         }
       }
     }
 
 
+  }
 }
