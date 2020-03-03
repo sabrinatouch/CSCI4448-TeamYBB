@@ -2,9 +2,10 @@ import java.util.Random;
 
 public class Regular extends Customer {
   private int days;
+  private int capacity = 0;
 
   public Regular(String name, String type){
-    super(name, type, 0);
+    super(name, type);
   }
 
   @Override
@@ -34,6 +35,21 @@ public class Regular extends Customer {
   @Override
   public void decrement(){
     this.days = this.days - 1;
+  }
+
+  @Override
+  public void makeRental(int number){
+    this.capacity += number;
+  }
+
+  @Override
+  public int getCapacity(){
+    return this.capacity;
+  }
+
+  @Override
+  public void resetCapacity(){
+    this.capacity = 0;
   }
 
 }

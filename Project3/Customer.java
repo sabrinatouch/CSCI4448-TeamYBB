@@ -1,13 +1,10 @@
 public abstract class Customer{
   protected String name;
   private String type;
-  protected int numCars;
-  protected int maxCars;
 
-  public Customer(String name, String type, int maxCars){
+  public Customer(String name, String type){
     this.name = name;
     this.type = type;
-    this.maxCars = maxCars;
   }
 
   public abstract String getName();
@@ -15,5 +12,8 @@ public abstract class Customer{
   public abstract void generateDays();
   public abstract int getDays();
   public abstract void decrement();
+  public abstract void makeRental(int number);
+  public abstract int getCapacity();
+  public abstract void resetCapacity();
 
 }
