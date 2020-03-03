@@ -77,7 +77,7 @@ public class Main
     store.addCar(car23);
     store.addCar(car24);
 
-    store.printList();
+    //store.printList();
     //System.out.println(store.getCapacity());
 
     //Instantiate a Customer factory and create 12 customers with 3 different categories.
@@ -129,35 +129,42 @@ public class Main
 
     int number_customers = rand.nextInt(12) + 1;
     ArrayList<Customer> rentingCustomers = new ArrayList<Customer>();
+    ArrayList<String> completedRentals = new ArrayList<String>();
+    ArrayList<String> activeRentals = new ArrayList<String>();
     int revenue = 0;
     Collections.shuffle(listofCustomers);
+
     for (int i = 0; i < number_customers; i++){
       boolean Radio = rand.nextBoolean();
       boolean Gps = rand1.nextBoolean();
       boolean CSeat = rand2.nextBoolean();
 
-      System.out.println(Radio);
-      System.out.println(Gps);
-      System.out.println(CSeat);
       if(store.getCapacity() > 0){
         Customer tempCustomer = listofCustomers.get(i);
         if(tempCustomer.getCapacity() + tempCustomer.getNumCars() <= 3 && store.getCapacity() - tempCustomer.getNumCars() >= 0){
+          String sentence = "";
+
+          sentence += tempCustomer.getName();
+
           for(int j = 0; j < tempCustomer.getNumCars(); j++){
             Car rentalCar = store.removeCar();
             rentalCar.setCost(tempCustomer.getDays());
             if(Radio){
-              new Radio(rentalCar);
+              rentalCar = new Radio(rentalCar);
             }
             if(Gps){
-              new GPS(rentalCar);
+              rentalCar = new GPS(rentalCar);
             }
             if(CSeat){
-              new CarSeat(rentalCar);
+              rentalCar = new CarSeat(rentalCar);
             }
             tempCustomer.addList(rentalCar);
+            sentence += rentalCar.getDescription();
+
             rentingCustomers.add(tempCustomer);
             store.addRevenue(rentalCar.getCost());
             revenue += rentalCar.getCost();
+            activeRentals.add(sentence);
           }
           Rental newRental = new Rental();
           //System.out.println(newRental.createRental(tempCustomer.getCarList()));
@@ -168,23 +175,55 @@ public class Main
 
     for(int i = 0; i < rentingCustomers.size(); i++){
       Customer Current = rentingCustomers.get(i);
-      Current.decrement();
+
       if(Current.getDays() == 0){
+        String sentence = "";
+        int index = listofCustomers.indexOf(Current.getName());
+        Customer tempCustomer = listofCustomers.get(index);
+
+        sentence += tempCustomer.getName();
+        sentence += tempCustomer.getDays();
+
         ArrayList<Car> currentCars = new ArrayList<Car>();
         currentCars = Current.getCarList();
+
         for(int j = 0; j < currentCars.size(); j++){
           Car returningCar = currentCars.get(j);
+          sentence += returningCar.getDescription();
+          sentence += returningCar.getCost();
           String name = returningCar.getName();
           String type = returningCar.getType();
           Car newCar = carFactory.createCar(name, type);
           store.addCar(newCar);
         }
+
+        completedRentals.add(sentence);
+
         Current.resetList();
         Current.resetCapacity();
         rentingCustomers.remove(Current);
       }
+
+      Current.decrement();
     }
 
+    System.out.println(completedRentals.size());
 
-  }
-}
+    for(int i = 0; i < completedRentals.size(); i++){
+      System.out.println(completedRentals.get(i));
+    }
+
+    System.out.println(activeRentals.size());
+
+    for(int i = 0; i < activeRentals.size(); i++){
+      System.out.println(activeRentals.get(i));
+    }
+
+    //All cars left in the store.
+    store.printList();
+
+    System.out.println("Revenue for the day: " + revenue);
+
+
+  } // void Main
+} //Actual main.

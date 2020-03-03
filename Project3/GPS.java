@@ -4,6 +4,7 @@ public class GPS extends CarDecorator{
     super(newCar);
   }
 
+  @Override
   public String getDescription(){
     return decoratedCar.getDescription() + ", GPS";
   }

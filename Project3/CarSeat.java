@@ -6,9 +6,10 @@ public class CarSeat extends CarDecorator{
     super(newCar);
     Random rand = new Random();
     number = rand.nextInt(4) + 1;
-    
+
   }
 
+  @Override
   public String getDescription(){
     return decoratedCar.getDescription() + ", " + number + " Car Seat(s)";
   }

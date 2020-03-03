@@ -29,7 +29,6 @@ public class Economy implements Car {
     this.cost = numDays * cost;
   }
 
-  @Override
   public String getDescription(){
     return name + type;
   }

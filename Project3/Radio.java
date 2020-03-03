@@ -4,6 +4,7 @@ public class Radio extends CarDecorator{
     super(newCar);
   }
 
+  @Override
   public String getDescription(){
     return decoratedCar.getDescription() + ", Radio";
   }
