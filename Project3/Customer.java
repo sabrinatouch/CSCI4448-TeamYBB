@@ -19,6 +19,6 @@ public abstract class Customer{
   public abstract void resetCapacity();
   public abstract void addList(Car car);
   public abstract void resetList();
-  public abstract ArrayList<Object> getCarList();
+  public abstract ArrayList<Car> getCarList();
 
 }
