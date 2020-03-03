@@ -129,7 +129,7 @@ public class Main
       currCust.generateNumCars();
     }
 
-    while(num_day <= 10){
+    while(num_day <= 35){
       System.out.println("");
       System.out.println("|-------------------------------------------------------------------------|");
       System.out.println("");
@@ -169,6 +169,7 @@ public class Main
 
             for(int j = 0; j < tempCustomer.getNumCars(); j++){
               Car rentalCar = store.removeCar();
+              tempCustomer.addList(rentalCar);
               //System.out.println(rentalCar);
               System.out.println("Store Capacity: " + store.getCapacity());
               rentalCar.setCost(tempCustomer.getDays());
@@ -183,7 +184,6 @@ public class Main
               }
 
               System.out.println("Rental Car going into list: " + rentalCar);
-              tempCustomer.addList(rentalCar);
               tempCustomer.setCapacity(1);
               sentence += rentalCar.getDescription() + " ";
 
