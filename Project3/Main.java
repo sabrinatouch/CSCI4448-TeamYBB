@@ -50,7 +50,7 @@ public class Main
     Car car24 = carFactory.createCar("STA126", "Standard");
 
     //Instantiate a store and add the 24 cars into the store inventory.
-    Store store = new Store();
+    Store store = Store.Store();
 
     store.addCar(car1);
     store.addCar(car2);
