@@ -13,7 +13,7 @@ public class Business extends Customer {
 
   @Override
   public int getNumCars(){
-    return this.num_cars = 3;
+    return this.num_cars;
   }
 
   @Override

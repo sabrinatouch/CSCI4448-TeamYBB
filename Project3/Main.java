@@ -154,10 +154,6 @@ public class Main
           int tempCustomerNumCars = tempCustomer.getNumCars();
           int storeCapacity = store.getCapacity();
 
-          //System.out.println("Temp Customer Capacity: " + tempCustomerCapacity);
-          //System.out.println("Temp Customer Capacity plus tempCustomerNumCars: " + (tempCustomerCapacity + tempCustomerNumCars));
-          //System.out.println("Store capacity minus tempCustomerNumCars: " + (storeCapacity - tempCustomerNumCars));
-
           //Check if the customer is able to rent out their desired number of cars from the store.
           if((tempCustomerCapacity < 3) && ((tempCustomerCapacity + tempCustomerNumCars) <= 3) && ((storeCapacity - tempCustomerNumCars) >= 0)){
             //Generate a sentence for the report.
@@ -171,6 +167,7 @@ public class Main
 
             for(int j = 0; j < tempCustomer.getNumCars(); j++){
               Car rentalCar = store.removeCar();
+              //System.out.println(rentalCar);
               System.out.println("Store Capacity: " + store.getCapacity());
               rentalCar.setCost(tempCustomer.getDays());
               if(Radio){
@@ -182,6 +179,8 @@ public class Main
               if(CSeat){
                 rentalCar = new CarSeat(rentalCar);
               }
+
+              System.out.println("Rental Car going into list: " + rentalCar);
               tempCustomer.addList(rentalCar);
               tempCustomer.setCapacity(1);
               sentence += rentalCar.getDescription() + " ";
@@ -190,11 +189,6 @@ public class Main
               revenue += rentalCar.getCost();
               activeRentals.add(sentence);
             }
-
-
-            //Rental newRental = new Rental();
-            //newRental.createRental(tempCustomer.getCarList());
-
           }
         }
       }
@@ -208,27 +202,28 @@ public class Main
         if(Current.getDays() == 0){
           String sentence = "";
 
-          /*
-          for(int j = 0; j < listofCustomers.size(); j++){
-            if(listofCustomers.get(j).getName().equals(Current.getName())){
-              Customer currCustomer = listofCustomers.get(j);
-            }
-          }
-          */
-
           sentence += Current.getName();
           sentence += Current.getDays();
 
           ArrayList<Car> currentCars = new ArrayList<Car>();
           currentCars = Current.getCarList();
 
+          System.out.println("Current Cars: " + currentCars);
+
           for(int j = 0; j < currentCars.size(); j++){
+            System.out.println("Name of returning Car:" + currentCars.get(j).getName());
+
             Car returningCar = currentCars.get(j);
+            System.out.println("Returning Car: " + returningCar);
             sentence += returningCar.getDescription();
             sentence += returningCar.getCost();
             String name = returningCar.getName();
             String type = returningCar.getType();
+            //System.out.println("Name of new car: " + name);
+            //System.out.println("Type of new car: " + type);
+
             Car newCar = carFactory.createCar(name, type);
+            //System.out.println("New Car: " + newCar);
             store.addCar(newCar);
             //System.out.println(newCar.getDescription());
             completed_rentals += 1;
@@ -241,7 +236,6 @@ public class Main
           Current.resetDays();
 
           iterator.remove();
-          System.out.println("Here");
         }
         else{
           Current.decrement();
@@ -262,7 +256,8 @@ public class Main
       }
 
       //All cars left in the store.
-      store.printList();
+
+      //store.printList();
 
       System.out.println("Revenue for the day: " + revenue);
 
