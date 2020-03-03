@@ -98,5 +98,28 @@ public class Main
     Customer customer11 = customerFactory.createCustomer("Andy", "Casual");
     Customer customer12 = customerFactory.createCustomer("Eric", "Casual");
 
-  }
+
+    // Making a list of all the customer objects
+    Customer[] listofCustomers = new Customer[]
+    {
+      customer1, customer2, customer3, customer4, customer5, customer6, customer7, customer8, customer9, customer10, customer11, customer12
+    };
+
+    for(int i = 0; i < listofCustomers.length; i++){
+      Customer currCust = listofCustomers[i];
+      currCust.generateDays();
+    }
+
+    Random rand = new Random();
+    int number_customers = rand.nextInt(12) + 1;
+
+    while(Store.getCapacity() > 0){
+      Customer tempCustomer;
+      Collections.shuffle(listofCustomers);
+      for (int i = 0; i< number_customers; i++){
+          tempCustomer = listofCustomers.get(i);
+      }
+    }
+
+
 }
