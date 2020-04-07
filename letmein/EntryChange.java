@@ -1,9 +1,10 @@
+import java.util.ArrayList;
 
 public class EntryChange implements Subject {
     private ArrayList<Observer> observers = new ArrayList<Observer>();
 
     @Override
-    public void registerObserver(Observer o) {
+    public void addObserver(Observer o){
         observers.add(o);
     }
 
@@ -13,7 +14,7 @@ public class EntryChange implements Subject {
     }
 
     @Override
-    public void notifyObservers() {
+    public void notifyObservers(Message m) {
         for ( Observer o : observers) {
             o.update(m);
         }
