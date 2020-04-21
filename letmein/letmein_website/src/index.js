@@ -4,9 +4,13 @@ import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
+import SignUp from './components/sign-up/SignUp';
+import Dashboard from './components/dashboard/Dashboard';
+
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    {/* <SignUp /> */}
+    <Dashboard />
   </React.StrictMode>,
   document.getElementById('root')
 );

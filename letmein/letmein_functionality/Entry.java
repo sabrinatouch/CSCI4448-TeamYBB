@@ -1,4 +1,4 @@
-
+// @getter // annotations
 public interface Entry {
     
     public String getCompany();
