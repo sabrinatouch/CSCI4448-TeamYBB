@@ -1,7 +1,13 @@
-class Client
+package com.TeamYBB.springboot.letmein_functionality;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class Client
 { 
     public static void main(String args[]) 
     { 
+        SpringApplication.run(Client.class, args);
         System.out.println("Welcome to LETMEIN."); 
 
         // Make instance of command controller
