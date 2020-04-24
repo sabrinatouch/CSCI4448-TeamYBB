@@ -5,8 +5,9 @@ public class InternshipEntry implements Entry{
     private String status;
     private String date;
     private String type;
+    private int id;
 
-    public InternshipEntry(String company, String position, String status, String date, String type){
+    public InternshipEntry(String status, String date, String company, String position, String type){
         this.company = company;
         this.position = position;
         this.status = status;
@@ -38,6 +39,11 @@ public class InternshipEntry implements Entry{
     public String getType(){
         return this.type;
     }
+    
+    @Override
+    public int getID(){
+        return this.id;
+    }
 
     @Override
     public void setCompany(String company){
@@ -54,5 +60,8 @@ public class InternshipEntry implements Entry{
     }
     public void setType(String type){
         this.type = type;
+    }
+    public void setID(int id){
+        this.id = id;
     }
 }

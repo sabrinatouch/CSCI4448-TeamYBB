@@ -1,17 +1,22 @@
+package com.TeamYBB.springboot.letmein_functionality;
 
 public class JobEntry implements Entry{
+    // Change order of variables as displayed. Can do later.
     private String company;
     private String position;
     private String status;
     private String date;
     private String type;
+    private int id;
 
-    public JobEntry(String company, String position, String status, String date, String type){
+    public JobEntry(String status, String date, String company, String position, String type){
+        // Change order of variables as displayed. Can do later.
         this.company = company;
         this.position = position;
         this.status = status;
         this.date = date;
         this.type = type;
+        this.id = 0;
     }
 
     @Override
@@ -40,6 +45,11 @@ public class JobEntry implements Entry{
     }
 
     @Override
+    public int getID(){
+        return this.id;
+    }
+
+    @Override
     public void setCompany(String company){
         this.company = company;
     }
@@ -54,5 +64,8 @@ public class JobEntry implements Entry{
     }
     public void setType(String type){
         this.type = type;
+    }
+    public void setID(int id){
+        this.id = id;
     }
 }
