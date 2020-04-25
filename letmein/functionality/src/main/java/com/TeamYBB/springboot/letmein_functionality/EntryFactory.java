@@ -1,3 +1,5 @@
+package com.TeamYBB.springboot.letmein_functionality;
+
 public class EntryFactory {
     public Entry createEntry(String status, String date, String company, String position, String type){
         if(type == "Full Time"){

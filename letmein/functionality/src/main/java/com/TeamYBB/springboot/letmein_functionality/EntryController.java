@@ -16,7 +16,7 @@ public class EntryController {
     /**
      * Add a new entry into database
      */
-    @PostMapping("/jobs")
+    @PostMapping("/add-jobs")
     public String addEntry(@RequestBody JobEntry entry){
         Database db = Database.getInstance();
         db.add(entry);
@@ -26,7 +26,7 @@ public class EntryController {
     /**
      * Update an entry from the database
      */
-    @PutMapping("/jobs")
+    @PutMapping("/edit-job")
     public String editEntry(@RequestBody JobEntry entry){
         Database db = Database.getInstance();
         db.update(entry.getID(), entry);
@@ -36,7 +36,7 @@ public class EntryController {
     /**
      * Delete an entry from the database
      */
-    @DeleteMapping("/jobs")
+    @DeleteMapping("/delete-job")
     public String deleteEntry(@RequestBody JobEntry entry){
         Database db = Database.getInstance();
         db.delete(entry.getID());

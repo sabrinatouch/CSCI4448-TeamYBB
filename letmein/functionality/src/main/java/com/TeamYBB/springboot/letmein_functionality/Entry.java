@@ -1,3 +1,5 @@
+package com.TeamYBB.springboot.letmein_functionality;
+
 // @getter // annotations
 public interface Entry {
     
