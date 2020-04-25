@@ -1,3 +1,4 @@
+package com.TeamYBB.springboot.letmein_functionality;
 
 public class InternshipEntry implements Entry{
     private String company;
