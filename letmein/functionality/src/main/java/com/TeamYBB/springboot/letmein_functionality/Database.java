@@ -144,13 +144,19 @@ public class Database {
     }
 
     // Edit entry in database
-    public boolean update(int id, String status, String date, String company, String position, String type) {
+    public boolean update(int id, JobEntry entry) {
         String sql = "UPDATE jobs SET status = ? , "
                 + "date = ? , "
                 + "company = ? , "
                 + "position = ? , "
                 + "type = ? "
                 + "WHERE id = ?";
+
+        String status = entry.getStatus();
+        String date = entry.getDate();
+        String company = entry.getCompany();
+        String position = entry.getPosition();
+        String type = entry.getType();
 
         try (Connection conn = this.connect();
                 PreparedStatement pstmt = conn.prepareStatement(sql)) {
