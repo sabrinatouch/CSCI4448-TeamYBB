@@ -9,13 +9,17 @@ public class JobEntry implements Entry{
     private String date;
     private String type;
     private int id;
-
-    private JobEntry(JobBuilder builder){
+    
+    private JobEntry(JobEntryBuilder builder){
         this.company = builder.company;
         this.position = builder.position;
         this.status = builder.status;
         this.date = builder.date;
         this.type = builder.type;
+    }
+
+    public static JobEntryBuilder builder(){
+        return new JobEntryBuilder();
     }
 
     @Override
@@ -53,34 +57,35 @@ public class JobEntry implements Entry{
         this.id = id;
     }
 
-    public static class JobBuilder{
-        private String company;
-        private String position;
-        private String status;
-        private String date;
-        private String type;
+    public static class JobEntryBuilder{
+        private String company = "";
+        private String position = "";
+        private String status = "";
+        private String date = "";
+        private String type = "";
 
-        public JobBuilder(String company){
+        public JobEntryBuilder company(String company){
             this.company = company;
-        }
-
-        public JobBuilder position(String position){
-            this.position = position;
             return this;
         }
 
-        public JobBuilder status(String status){
+        public JobEntryBuilder status(String status){
             this.status = status;
             return this;
         }
 
-        public JobBuilder date(String date){
-            this.date = date;
+        public JobEntryBuilder type(String type){
+            this.type = type;
             return this;
         }
 
-        public JobBuilder type(String type){
-            this.type = type;
+        public JobEntryBuilder position(String position){
+            this.position = position;
+            return this;
+        }
+
+        public JobEntryBuilder date(String date){
+            this.date = date;
             return this;
         }
 
