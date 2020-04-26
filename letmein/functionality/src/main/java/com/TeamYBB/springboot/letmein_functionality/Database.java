@@ -57,8 +57,8 @@ public class Database {
     public void createNewTable() {
         // SQL statement for creating a new table
         String sql = "CREATE TABLE IF NOT EXISTS jobs (\n" + "	id integer PRIMARY KEY,\n"
-                + "	status varchar(10) NOT NULL,\n" + "	date varchar(40) NOT NULL,\n"
-                + " company varchar(40) NOT NULL,\n" + " position varchar(40) NOT NULL,\n"
+                + "	status varchar(10) NOT NULL,\n" + "	date varchar(40),\n"
+                + " company varchar(40) NOT NULL,\n" + " position varchar(40),\n"
                 + " type varchar(10) NOT NULL\n" + ");";
 
         try (Connection conn = DriverManager.getConnection(URL); Statement stmt = conn.createStatement()) {

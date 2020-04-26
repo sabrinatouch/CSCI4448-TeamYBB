@@ -1,5 +1,6 @@
 package com.TeamYBB.springboot.letmein_functionality;
 
+//EXAMPLE OF BUILDER PATTERN HERE.
 public class JobEntry implements Entry{
     // Change order of variables as displayed. Can do later.
     private String company;
@@ -8,15 +9,17 @@ public class JobEntry implements Entry{
     private String date;
     private String type;
     private int id;
+    
+    private JobEntry(JobEntryBuilder builder){
+        this.company = builder.company;
+        this.position = builder.position;
+        this.status = builder.status;
+        this.date = builder.date;
+        this.type = builder.type;
+    }
 
-    public JobEntry(String status, String date, String company, String position, String type){
-        // Change order of variables as displayed. Can do later.
-        this.company = company;
-        this.position = position;
-        this.status = status;
-        this.date = date;
-        this.type = type;
-        this.id = 0;
+    public static JobEntryBuilder builder(){
+        return new JobEntryBuilder();
     }
 
     @Override
@@ -50,22 +53,47 @@ public class JobEntry implements Entry{
     }
 
     @Override
-    public void setCompany(String company){
-        this.company = company;
-    }
-    public void setPosition(String position){
-        this.position = position;
-    }
-    public void setStatus(String status){
-        this.status = status;
-    }
-    public void setDate(String date){
-        this.date = date;
-    }
-    public void setType(String type){
-        this.type = type;
-    }
     public void setID(int id){
         this.id = id;
     }
+
+    public static class JobEntryBuilder{
+        private String company = "";
+        private String position = "";
+        private String status = "";
+        private String date = "";
+        private String type = "";
+
+        public JobEntryBuilder company(String company){
+            this.company = company;
+            return this;
+        }
+
+        public JobEntryBuilder status(String status){
+            this.status = status;
+            return this;
+        }
+
+        public JobEntryBuilder type(String type){
+            this.type = type;
+            return this;
+        }
+
+        public JobEntryBuilder position(String position){
+            this.position = position;
+            return this;
+        }
+
+        public JobEntryBuilder date(String date){
+            this.date = date;
+            return this;
+        }
+
+        public JobEntry build(){
+            JobEntry entry = new JobEntry(this);
+            return entry;
+        }
+    }
+
+    //JobEntry entry = new JobEntry.JobBuilder("company").position("position").status("status").type("type").build();
 }
