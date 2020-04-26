@@ -7,6 +7,7 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
+import PopupForm from './PopupForm';
 
 // Generate Order Data
 function createData(status, date, company, position, type) {
@@ -25,8 +26,10 @@ function preventDefault(event) {
 }
 
 const useStyles = makeStyles((theme) => ({
-  seeMore: {
-    marginTop: theme.spacing(3),
+  root: {
+    '& > span': {
+      margin: theme.spacing(2),
+    },
   },
 }));
 
@@ -57,6 +60,9 @@ export default function Orders() {
           ))}
         </TableBody>
       </Table>
+      <div align="right">
+        <PopupForm />
+      </div>
     </React.Fragment>
   );
 }
