@@ -10,6 +10,10 @@ public class JobEntry implements Entry{
     private String type;
     private int id;
     
+    public JobEntry(){
+        
+    }
+
     private JobEntry(JobEntryBuilder builder){
         this.company = builder.company;
         this.position = builder.position;

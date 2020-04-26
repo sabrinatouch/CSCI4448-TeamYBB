@@ -63,11 +63,11 @@ export default class FormDialog extends React.Component {
     e.preventDefault(); // Cancels the default action. Performing only this action. (i.e. preventing from button spamming)
 
     const entry = {
-      status: this.state.status,
-      date: this.state.date,
-      company: this.state.company,
-      position: this.state.position,
-      type: this.state.type,
+      "status": this.state.status,
+      "date": this.state.date,
+      "company": this.state.company,
+      "position": this.state.position,
+      "type": this.state.type,
     }
 
     axios.post('http://localhost:8080/add-jobs', entry)
