@@ -32,7 +32,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default class Table extends Component{
+export default class JobTable extends Component{
   //const classes = useStyles();
 
   state = {
