@@ -14,12 +14,13 @@ import Title from './Title';
 import PopupForm from './PopupForm';
 import DeleteJobButton from './DeleteJobButton';
 import EditJobButton from './EditJobButton';
+import Button from '@material-ui/core/Button';
 
 import axios from 'axios';
 
 // Generate Data
-function createData(status, date, company, position, type) {
-  return { status, date, company, position, type };
+function createData(id, status, date, company, position, type) {
+  return { id, status, date, company, position, type };
 }
 
 function preventDefault(event) {
@@ -35,10 +36,20 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default class JobTable extends Component{
-  //const classes = useStyles();
+  constructor(props) {
+    super(props)
+      this.state = {
+        id: '',
+        status: '',
+        date: '',
+        company: '',
+        position: '',
+        type: '',
+        displayQuery: []
+      }
 
-  state = {
-    displayQuery: []
+      this.onDelete = this.onDelete.bind(this);
+      this.onEdit = this.onEdit.bind(this);
   }
 
   componentDidMount() {
@@ -47,12 +58,29 @@ export default class JobTable extends Component{
       .then(res => res.json())
       .then((data) => {
         var objs = data.map(x => 
-            createData(x[0], x[1], x[2], x[3], x[4])
+            createData(x[0], x[1], x[2], x[3], x[4], x[5])
         )
         this.setState({ displayQuery: objs })
       })
 
       .catch(console.log)
+  }
+
+  onDelete(e, id) {
+    e.preventDefault();
+    
+    axios.delete('http://localhost:8080/delete-job/' + id)
+
+    console.log("onDelete clicked")
+    console.log(id)
+  }
+
+  onEdit(e) {
+    e.preventDefault();
+
+    //axios.put('http://localhost:8080/edit-job', entry)
+
+    console.log("onEdit clicked")
   }
 
   render() {
@@ -62,6 +90,7 @@ export default class JobTable extends Component{
       <Table size="small">
         <TableHead>
           <TableRow>
+            <TableCell>ID</TableCell>
             <TableCell>Status</TableCell>
             <TableCell>Date</TableCell>
             <TableCell>Company</TableCell>
@@ -72,13 +101,18 @@ export default class JobTable extends Component{
         <TableBody>
           {this.state.displayQuery.map((row) => (
             <TableRow>
+              <TableCell>{row.id}</TableCell>
               <TableCell>{row.status}</TableCell>
               <TableCell>{row.date}</TableCell>
               <TableCell>{row.company}</TableCell>
               <TableCell>{row.position}</TableCell>
               <TableCell>{row.type}</TableCell>
-              <DeleteJobButton />
-              <EditJobButton />
+              <Button onClick={this.onEdit} color="default" variant="contained">
+                Edit
+              </Button>
+              <Button onClick={((e) => this.onDelete(e, row.id))} color="secondary" variant="contained">
+                Delete
+              </Button>
             </TableRow>
           ))}
         </TableBody>
