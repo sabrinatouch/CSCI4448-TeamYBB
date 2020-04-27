@@ -7,6 +7,10 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @CrossOrigin(origins = { "http://localhost:3000" })
 @RestController 
@@ -18,7 +22,7 @@ public class EntryController {
     /**
      * Add a new entry into database
      */
-    @PostMapping("/add-jobs")
+    @PostMapping("/add-job")
     public String addEntry(@RequestBody JobEntry entry){
         Database db = Database.getInstance();
         db.add(entry);
@@ -43,5 +47,15 @@ public class EntryController {
         Database db = Database.getInstance();
         db.delete(entry.getID());
         return "deleteEntry: success";
+    }
+
+    /**
+     * Get job entries from database
+     */
+    @GetMapping("/get-jobs")
+    public ArrayList<ArrayList<String>> getJobEntries(){
+        Database db = Database.getInstance();
+        ArrayList<ArrayList<String>> resQuery = db.getAll();
+        return resQuery;
     }
 }

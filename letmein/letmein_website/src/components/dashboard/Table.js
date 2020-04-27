@@ -1,4 +1,8 @@
-import React from 'react';
+/**
+ * Credit to: https://pusher.com/tutorials/consume-restful-api-react
+ */
+
+import React, { Component } from 'react';
 import Link from '@material-ui/core/Link';
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -9,17 +13,12 @@ import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
 import PopupForm from './PopupForm';
 
-// Generate Order Data
+import axios from 'axios';
+
+// Generate Data
 function createData(status, date, company, position, type) {
   return { status, date, company, position, type };
 }
-
-const rows = [
-  createData('Accepted', '16 Apr, 2020', 'Google', 'CEO', 'Full Time'),
-  createData('Pending', '05 Mar, 2020', 'Amazon', 'Senior Software Engineer', 'Full Time'),
-  createData('Pending', '11 Mar, 2020', 'Facebook', 'Project Manager', 'Internship'),
-  createData('Rejected', '22 Feb, 2020', 'Apple', 'Data Scientist', 'Internship'),
-];
 
 function preventDefault(event) {
   event.preventDefault();
@@ -33,8 +32,28 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Orders() {
-  const classes = useStyles();
+export default class Table extends Component{
+  //const classes = useStyles();
+
+  state = {
+    displayQuery: []
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:8080/get-jobs')
+
+      .then(res => res.json())
+      .then((data) => {
+        var objs = data.map(x => 
+            createData(x[0], x[1], x[2], x[3], x[4])
+        )
+        this.setState({ displayQuery: objs })
+      })
+
+      .catch(console.log)
+  }
+
+  render() {
   return (
     <React.Fragment>
       <Title>My List</Title>
@@ -49,7 +68,7 @@ export default function Orders() {
           </TableRow>
         </TableHead>
         <TableBody>
-          {rows.map((row) => (
+          {this.state.displayQuery.map((row) => (
             <TableRow>
               <TableCell>{row.status}</TableCell>
               <TableCell>{row.date}</TableCell>
@@ -65,4 +84,5 @@ export default function Orders() {
       </div>
     </React.Fragment>
   );
+  }
 }

@@ -7,16 +7,13 @@ public class Application
 {
     public static void main(String args[]) 
     {
-        /*
-        
-        JobEntry entry = JobEntry.builder()
-        .company("Google")
-        .status("Accepted")
-        .type("Full Time")
-        .position("position")
-        .build();
-
-        */
+    
+        // JobEntry entry = JobEntry.builder()
+        // .company("Google")
+        // .status("Accepted")
+        // .type("Full Time")
+        // .position("position")
+        // .build();
         
         Database db = Database.getInstance();
         //db.add(entry);

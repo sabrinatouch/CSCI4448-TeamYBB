@@ -8,7 +8,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -183,6 +183,36 @@ public class Database {
         } catch (SQLException e) {
             return false; 
             // If db.update returns false, then access to db what unsuccessful
+        }
+    }
+
+    // Get all rows from a table
+    public ArrayList<ArrayList<String>> getAll(){
+        String sql = "SELECT * FROM jobs";
+        
+        try (Connection conn = this.connect();
+             Statement stmt  = conn.createStatement();
+             ResultSet rs    = stmt.executeQuery(sql)){
+                
+            ArrayList<ArrayList<String>> resQuery = new ArrayList<ArrayList<String>>();
+
+            // loop through the result set
+            while (rs.next()) {
+                String status = (rs.getString("status"));
+                String date = (rs.getString("date"));
+                String company = (rs.getString("company"));
+                String position = (rs.getString("position"));
+                String type = (rs.getString("type"));
+                            
+                ArrayList<String> row = new ArrayList<String>(Arrays.asList(status, date, company, position, type));
+                
+                resQuery.add(row);
+            }
+
+            return resQuery;
+        } catch (SQLException e) {
+            ArrayList<ArrayList<String>> emptyList = new ArrayList<ArrayList<String>>();
+            return emptyList;
         }
     }
 }

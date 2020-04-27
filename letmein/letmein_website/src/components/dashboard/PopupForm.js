@@ -70,7 +70,7 @@ export default class FormDialog extends React.Component {
       "type": this.state.type,
     }
 
-    axios.post('http://localhost:8080/add-jobs', entry)
+    axios.post('http://localhost:8080/add-job', entry)
 
     this.handleClose()
     console.log("onSubmit clicked")
