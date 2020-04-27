@@ -198,13 +198,14 @@ public class Database {
 
             // loop through the result set
             while (rs.next()) {
+                String id = Integer.toString(rs.getInt("id"));
                 String status = (rs.getString("status"));
                 String date = (rs.getString("date"));
                 String company = (rs.getString("company"));
                 String position = (rs.getString("position"));
                 String type = (rs.getString("type"));
                             
-                ArrayList<String> row = new ArrayList<String>(Arrays.asList(status, date, company, position, type));
+                ArrayList<String> row = new ArrayList<String>(Arrays.asList(id, status, date, company, position, type));
                 
                 resQuery.add(row);
             }

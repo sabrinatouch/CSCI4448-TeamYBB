@@ -8,9 +8,12 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import com.fasterxml.jackson.annotation.ObjectIdGenerator.IdKey;
 
 @CrossOrigin(origins = { "http://localhost:3000" })
 @RestController 
@@ -42,10 +45,11 @@ public class EntryController {
     /**
      * Delete an entry from the database
      */
-    @DeleteMapping("/delete-job")
-    public String deleteEntry(@RequestBody JobEntry entry){
+    @DeleteMapping("/delete-job/{id}")
+    public String deleteEntry(@PathVariable int id){
         Database db = Database.getInstance();
-        db.delete(entry.getID());
+        System.out.println(id);
+        db.delete(id);
         return "deleteEntry: success";
     }
 
