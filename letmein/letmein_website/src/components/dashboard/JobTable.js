@@ -12,6 +12,8 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
 import PopupForm from './PopupForm';
+import DeleteJobButton from './DeleteJobButton';
+import EditJobButton from './EditJobButton';
 
 import axios from 'axios';
 
@@ -75,6 +77,8 @@ export default class JobTable extends Component{
               <TableCell>{row.company}</TableCell>
               <TableCell>{row.position}</TableCell>
               <TableCell>{row.type}</TableCell>
+              <DeleteJobButton />
+              <EditJobButton />
             </TableRow>
           ))}
         </TableBody>
