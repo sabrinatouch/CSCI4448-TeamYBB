@@ -1,5 +1,8 @@
+/**
+ * Design Pattern: Singleton
+ */
+
 package com.TeamYBB.springboot.letmein_functionality;
-//package net.sqlitetutorial;
 
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;

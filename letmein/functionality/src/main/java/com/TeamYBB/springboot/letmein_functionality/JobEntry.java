@@ -1,6 +1,9 @@
+/**
+ * Design Pattern: Builder
+ */
+
 package com.TeamYBB.springboot.letmein_functionality;
 
-//EXAMPLE OF BUILDER PATTERN HERE.
 public class JobEntry implements Entry{
     // Change order of variables as displayed. Can do later.
     private String company;

@@ -1,10 +1,4 @@
-/**
- * Credit to: https://pusher.com/tutorials/consume-restful-api-react
- */
-
 import React, { Component } from 'react';
-import Link from '@material-ui/core/Link';
-import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -12,28 +6,20 @@ import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Title from './Title';
 import PopupForm from './PopupForm';
-import DeleteJobButton from './DeleteJobButton';
-import EditJobButton from './EditJobButton';
 import Button from '@material-ui/core/Button';
+import EditForm from './EditForm';
 
 import axios from 'axios';
 
-// Generate Data
+// Generate and consolidate data
 function createData(id, status, date, company, position, type) {
   return { id, status, date, company, position, type };
 }
 
+// Prevents spamming of a button
 function preventDefault(event) {
   event.preventDefault();
 }
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    '& > span': {
-      margin: theme.spacing(2),
-    },
-  },
-}));
 
 export default class JobTable extends Component{
   constructor(props) {
@@ -49,9 +35,12 @@ export default class JobTable extends Component{
       }
 
       this.onDelete = this.onDelete.bind(this);
-      this.onEdit = this.onEdit.bind(this);
   }
 
+  /**
+   * Credit to consume restful API in React: 
+   * https://pusher.com/tutorials/consume-restful-api-react
+   */
   componentDidMount() {
     fetch('http://localhost:8080/get-jobs')
 
@@ -66,6 +55,7 @@ export default class JobTable extends Component{
       .catch(console.log)
   }
 
+  // Make API call for Delete action
   onDelete(e, id) {
     e.preventDefault();
     
@@ -75,14 +65,8 @@ export default class JobTable extends Component{
     console.log(id)
   }
 
-  onEdit(e) {
-    e.preventDefault();
-
-    //axios.put('http://localhost:8080/edit-job', entry)
-
-    console.log("onEdit clicked")
-  }
-
+  // Renders table of entries
+  // Displays Edit, Delete, and Add Entry buttons
   render() {
   return (
     <React.Fragment>
@@ -107,9 +91,7 @@ export default class JobTable extends Component{
               <TableCell>{row.company}</TableCell>
               <TableCell>{row.position}</TableCell>
               <TableCell>{row.type}</TableCell>
-              <Button onClick={this.onEdit} color="default" variant="contained">
-                Edit
-              </Button>
+              <EditForm row={row}/>
               <Button onClick={((e) => this.onDelete(e, row.id))} color="secondary" variant="contained">
                 Delete
               </Button>
